@@ -1,0 +1,52 @@
+# ========================
+# Visual Studio 2019
+# ========================
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+
+# Build output
+Debug/
+Release/
+x64/
+x86/
+ipch/
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+*.obj
+*.idb
+*.tlog
+*.lastbuildstate
+*.unsuccessfulbuild
+
+# ========================
+# DB
+# ========================
+config.ini
+config.cfg
+*.env
+.env
+db_config.*
+connection_string.*
+secrets.*
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# System
+# ========================
+Thumbs.db
+.DS_Store
+desktop.ini
