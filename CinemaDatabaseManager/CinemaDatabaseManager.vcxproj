@@ -135,6 +135,8 @@
   <ItemGroup>
     <ClCompile Include="CinemaRepository.cpp" />
     <ClCompile Include="ClientRepository.cpp" />
+    <ClCompile Include="ConfigLoader.cpp" />
+    <ClCompile Include="ConfigLoader.h" />
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
@@ -144,6 +146,9 @@
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="TicketRepository.cpp" />
     <ClCompile Include="TicketTypeRepository.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="schema.sql" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

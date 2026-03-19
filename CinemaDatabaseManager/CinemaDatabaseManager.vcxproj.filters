@@ -68,5 +68,14 @@
     <ClCompile Include="TicketTypeRepository.cpp">
       <Filter>Pliki źródłowe\Repositories</Filter>
     </ClCompile>
+    <ClCompile Include="ConfigLoader.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfigLoader.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="schema.sql" />
   </ItemGroup>
 </Project>
