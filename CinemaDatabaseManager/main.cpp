@@ -9,8 +9,6 @@ int main() {
 
     ConfigLoader config;
 
-
-
     const std::string host = config.getHost();
     const std::string port = config.getPort();
     const std::string dbname = config.getDbName();
