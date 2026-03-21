@@ -60,6 +60,9 @@
     <ClInclude Include="TicketModel.h">
       <Filter>Pliki nagłówkowe\Models</Filter>
     </ClInclude>
+    <ClInclude Include="EmployeeModel.h">
+      <Filter>Pliki nagłówkowe\Models</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
@@ -120,6 +123,9 @@
       <Filter>Pliki źródłowe\Models</Filter>
     </ClCompile>
     <ClCompile Include="TicketModel.cpp">
+      <Filter>Pliki źródłowe\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeModel.cpp">
       <Filter>Pliki źródłowe\Models</Filter>
     </ClCompile>
   </ItemGroup>

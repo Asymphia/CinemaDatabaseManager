@@ -129,6 +129,7 @@
     <ClInclude Include="CinemaModel.h" />
     <ClInclude Include="ClientModel.h" />
     <ClInclude Include="Database.h" />
+    <ClInclude Include="EmployeeModel.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MovieModel.h" />
@@ -147,6 +148,7 @@
     <ClCompile Include="ConfigLoader.cpp" />
     <ClCompile Include="ConfigLoader.h" />
     <ClCompile Include="Database.cpp" />
+    <ClCompile Include="EmployeeModel.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MovieModel.cpp" />
