@@ -10,7 +10,7 @@ int TicketType::getId() const {
 }
 
 std::string TicketType::getTableName() const {
-    return "TicketType"
+    return "TicketType";
 }
 
 std::string TicketType::toString() const {

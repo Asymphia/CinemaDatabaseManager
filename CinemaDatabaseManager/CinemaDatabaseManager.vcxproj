@@ -136,6 +136,8 @@
     <ClInclude Include="RoomModel.h" />
     <ClInclude Include="ScheduleModel.h" />
     <ClInclude Include="Statistics.h" />
+    <ClInclude Include="TicketModel.h" />
+    <ClInclude Include="TicketTypeModel.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CinemaModel.cpp" />
@@ -154,7 +156,9 @@
     <ClCompile Include="ScheduleModel.cpp" />
     <ClCompile Include="ScheduleRepository.cpp" />
     <ClCompile Include="Statistics.cpp" />
+    <ClCompile Include="TicketModel.cpp" />
     <ClCompile Include="TicketRepository.cpp" />
+    <ClCompile Include="TicketTypeModel.cpp" />
     <ClCompile Include="TicketTypeRepository.cpp" />
   </ItemGroup>
   <ItemGroup>
