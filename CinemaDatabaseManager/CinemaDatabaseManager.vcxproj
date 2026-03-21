@@ -102,13 +102,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Program Files\PostgreSQL\18\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>E:\Tools\posgresql\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>libpq.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Program Files\PostgreSQL\18\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>E:\Tools\posgresql\lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -126,13 +126,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CinemaModel.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="Menu.h" />
-    <ClInclude Include="Models.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="MovieModel.h" />
     <ClInclude Include="Repositories.h" />
+    <ClInclude Include="RoomModel.h" />
     <ClInclude Include="Statistics.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CinemaModel.cpp" />
     <ClCompile Include="CinemaRepository.cpp" />
     <ClCompile Include="ClientRepository.cpp" />
     <ClCompile Include="ConfigLoader.cpp" />
@@ -140,7 +144,9 @@
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MovieModel.cpp" />
     <ClCompile Include="MovieRepository.cpp" />
+    <ClCompile Include="RoomModel.cpp" />
     <ClCompile Include="RoomRepository.cpp" />
     <ClCompile Include="ScheduleRepository.cpp" />
     <ClCompile Include="Statistics.cpp" />
