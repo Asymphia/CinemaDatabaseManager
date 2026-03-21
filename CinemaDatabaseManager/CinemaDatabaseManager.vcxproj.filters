@@ -51,6 +51,9 @@
     <ClInclude Include="ScheduleModel.h">
       <Filter>Pliki nagłówkowe\Models</Filter>
     </ClInclude>
+    <ClInclude Include="ClientModel.h">
+      <Filter>Pliki nagłówkowe\Models</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
@@ -102,6 +105,9 @@
       <Filter>Pliki źródłowe\Models</Filter>
     </ClCompile>
     <ClCompile Include="ScheduleModel.cpp">
+      <Filter>Pliki źródłowe\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientModel.cpp">
       <Filter>Pliki źródłowe\Models</Filter>
     </ClCompile>
   </ItemGroup>

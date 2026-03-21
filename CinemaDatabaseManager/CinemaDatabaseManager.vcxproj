@@ -127,6 +127,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CinemaModel.h" />
+    <ClInclude Include="ClientModel.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Model.h" />
@@ -139,6 +140,7 @@
   <ItemGroup>
     <ClCompile Include="CinemaModel.cpp" />
     <ClCompile Include="CinemaRepository.cpp" />
+    <ClCompile Include="ClientModel.cpp" />
     <ClCompile Include="ClientRepository.cpp" />
     <ClCompile Include="ConfigLoader.cpp" />
     <ClCompile Include="ConfigLoader.h" />
