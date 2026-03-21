@@ -133,6 +133,7 @@
     <ClInclude Include="MovieModel.h" />
     <ClInclude Include="Repositories.h" />
     <ClInclude Include="RoomModel.h" />
+    <ClInclude Include="ScheduleModel.h" />
     <ClInclude Include="Statistics.h" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
     <ClCompile Include="MovieRepository.cpp" />
     <ClCompile Include="RoomModel.cpp" />
     <ClCompile Include="RoomRepository.cpp" />
+    <ClCompile Include="ScheduleModel.cpp" />
     <ClCompile Include="ScheduleRepository.cpp" />
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="TicketRepository.cpp" />
