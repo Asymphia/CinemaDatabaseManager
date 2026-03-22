@@ -127,6 +127,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CinemaModel.h" />
+    <ClInclude Include="CinemaRepository.h" />
     <ClInclude Include="ClientModel.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="EmployeeModel.h" />
@@ -153,7 +154,6 @@
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MovieModel.cpp" />
     <ClCompile Include="MovieRepository.cpp" />
-    <ClCompile Include="Repository.cpp" />
     <ClCompile Include="RoomModel.cpp" />
     <ClCompile Include="RoomRepository.cpp" />
     <ClCompile Include="ScheduleModel.cpp" />
