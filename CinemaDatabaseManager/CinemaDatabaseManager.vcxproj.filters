@@ -22,12 +22,12 @@
     <Filter Include="Pliki źródłowe\Models">
       <UniqueIdentifier>{565c6f36-4e46-4060-8ba9-a9ee5f3a9b60}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Repositories">
+      <UniqueIdentifier>{ef7f8eed-5ba0-4bb3-a778-bb11cda2b0cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Repositories.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Menu.h">
@@ -62,6 +62,9 @@
     </ClInclude>
     <ClInclude Include="EmployeeModel.h">
       <Filter>Pliki nagłówkowe\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Repository.h">
+      <Filter>Pliki nagłówkowe\Repositories</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="EmployeeModel.cpp">
       <Filter>Pliki źródłowe\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Repository.cpp">
+      <Filter>Pliki źródłowe\Repositories</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
