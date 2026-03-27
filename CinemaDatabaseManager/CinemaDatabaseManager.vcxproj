@@ -129,6 +129,7 @@
     <ClInclude Include="CinemaModel.h" />
     <ClInclude Include="CinemaRepository.h" />
     <ClInclude Include="ClientModel.h" />
+    <ClInclude Include="ClientRepository.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="EmployeeModel.h" />
     <ClInclude Include="Menu.h" />

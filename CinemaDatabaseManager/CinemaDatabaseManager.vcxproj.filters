@@ -78,6 +78,9 @@
     <ClInclude Include="ScheduleRepository.h">
       <Filter>Pliki nagłówkowe\Repositories</Filter>
     </ClInclude>
+    <ClInclude Include="ClientRepository.h">
+      <Filter>Pliki nagłówkowe\Repositories</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
