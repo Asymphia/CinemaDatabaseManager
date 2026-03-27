@@ -139,6 +139,7 @@
     <ClInclude Include="RoomModel.h" />
     <ClInclude Include="RoomRepository.h" />
     <ClInclude Include="ScheduleModel.h" />
+    <ClInclude Include="ScheduleRepository.h" />
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="TicketModel.h" />
     <ClInclude Include="TicketTypeModel.h" />
