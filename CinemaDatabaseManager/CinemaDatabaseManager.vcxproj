@@ -134,6 +134,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MovieModel.h" />
+    <ClInclude Include="MovieRepository.h" />
     <ClInclude Include="Repository.h" />
     <ClInclude Include="RoomModel.h" />
     <ClInclude Include="RoomRepository.h" />
