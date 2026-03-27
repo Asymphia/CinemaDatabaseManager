@@ -69,6 +69,9 @@
     <ClInclude Include="CinemaRepository.h">
       <Filter>Pliki nagłówkowe\Repositories</Filter>
     </ClInclude>
+    <ClInclude Include="RoomRepository.h">
+      <Filter>Pliki nagłówkowe\Repositories</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
