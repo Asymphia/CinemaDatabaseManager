@@ -87,6 +87,9 @@
     <ClInclude Include="TicketRepository.h">
       <Filter>Pliki nagłówkowe\Repositories</Filter>
     </ClInclude>
+    <ClInclude Include="EmployeeRepository.h">
+      <Filter>Pliki nagłówkowe\Repositories</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
@@ -151,6 +154,9 @@
     </ClCompile>
     <ClCompile Include="EmployeeModel.cpp">
       <Filter>Pliki źródłowe\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeRepository.cpp">
+      <Filter>Pliki źródłowe\Repositories</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

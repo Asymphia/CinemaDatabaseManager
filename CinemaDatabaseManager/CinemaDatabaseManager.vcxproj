@@ -132,6 +132,7 @@
     <ClInclude Include="ClientRepository.h" />
     <ClInclude Include="Database.h" />
     <ClInclude Include="EmployeeModel.h" />
+    <ClInclude Include="EmployeeRepository.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MovieModel.h" />
@@ -156,6 +157,7 @@
     <ClCompile Include="ConfigLoader.h" />
     <ClCompile Include="Database.cpp" />
     <ClCompile Include="EmployeeModel.cpp" />
+    <ClCompile Include="EmployeeRepository.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="MovieModel.cpp" />
