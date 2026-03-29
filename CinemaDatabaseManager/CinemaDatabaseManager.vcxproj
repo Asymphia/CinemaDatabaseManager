@@ -143,6 +143,7 @@
     <ClInclude Include="ScheduleRepository.h" />
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="TicketModel.h" />
+    <ClInclude Include="TicketRepository.h" />
     <ClInclude Include="TicketTypeModel.h" />
     <ClInclude Include="TicketTypeRepository.h" />
   </ItemGroup>
