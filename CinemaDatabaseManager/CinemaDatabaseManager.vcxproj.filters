@@ -81,6 +81,9 @@
     <ClInclude Include="ClientRepository.h">
       <Filter>Pliki nagłówkowe\Repositories</Filter>
     </ClInclude>
+    <ClInclude Include="TicketTypeRepository.h">
+      <Filter>Pliki nagłówkowe\Repositories</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">

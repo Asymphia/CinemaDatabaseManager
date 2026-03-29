@@ -144,6 +144,7 @@
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="TicketModel.h" />
     <ClInclude Include="TicketTypeModel.h" />
+    <ClInclude Include="TicketTypeRepository.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CinemaModel.cpp" />
