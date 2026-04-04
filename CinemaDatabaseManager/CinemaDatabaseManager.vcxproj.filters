@@ -111,6 +111,9 @@
     <ClInclude Include="ScheduleService.h">
       <Filter>Pliki nagłówkowe\Services</Filter>
     </ClInclude>
+    <ClInclude Include="ClientService.h">
+      <Filter>Pliki nagłówkowe\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
@@ -189,6 +192,9 @@
       <Filter>Pliki źródłowe\Services</Filter>
     </ClCompile>
     <ClCompile Include="ScheduleService.cpp">
+      <Filter>Pliki źródłowe\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="ClientService.cpp">
       <Filter>Pliki źródłowe\Services</Filter>
     </ClCompile>
   </ItemGroup>
