@@ -120,6 +120,9 @@
     <ClInclude Include="TicketService.h">
       <Filter>Pliki nagłówkowe\Services</Filter>
     </ClInclude>
+    <ClInclude Include="EmployeeService.h">
+      <Filter>Pliki nagłówkowe\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
@@ -207,6 +210,9 @@
       <Filter>Pliki źródłowe\Services</Filter>
     </ClCompile>
     <ClCompile Include="TicketService.cpp">
+      <Filter>Pliki źródłowe\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeService.cpp">
       <Filter>Pliki źródłowe\Services</Filter>
     </ClCompile>
   </ItemGroup>
