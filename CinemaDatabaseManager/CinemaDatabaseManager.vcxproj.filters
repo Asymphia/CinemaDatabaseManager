@@ -99,6 +99,9 @@
     <ClInclude Include="Service.h">
       <Filter>Pliki nagłówkowe\Services</Filter>
     </ClInclude>
+    <ClInclude Include="CinemaService.h">
+      <Filter>Pliki nagłówkowe\Services</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Statistics.cpp">
@@ -166,6 +169,9 @@
     </ClCompile>
     <ClCompile Include="EmployeeRepository.cpp">
       <Filter>Pliki źródłowe\Repositories</Filter>
+    </ClCompile>
+    <ClCompile Include="CinemaService.cpp">
+      <Filter>Pliki źródłowe\Services</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
