@@ -151,6 +151,7 @@
     <ClInclude Include="Statistics.h" />
     <ClInclude Include="TicketModel.h" />
     <ClInclude Include="TicketRepository.h" />
+    <ClInclude Include="TicketService.h" />
     <ClInclude Include="TicketTypeModel.h" />
     <ClInclude Include="TicketTypeRepository.h" />
     <ClInclude Include="TicketTypeService.h" />
@@ -181,6 +182,7 @@
     <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="TicketModel.cpp" />
     <ClCompile Include="TicketRepository.cpp" />
+    <ClCompile Include="TicketService.cpp" />
     <ClCompile Include="TicketTypeModel.cpp" />
     <ClCompile Include="TicketTypeRepository.cpp" />
     <ClCompile Include="TicketTypeService.cpp" />
