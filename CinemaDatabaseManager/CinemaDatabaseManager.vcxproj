@@ -153,6 +153,7 @@
     <ClInclude Include="TicketRepository.h" />
     <ClInclude Include="TicketTypeModel.h" />
     <ClInclude Include="TicketTypeRepository.h" />
+    <ClInclude Include="TicketTypeService.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CinemaModel.cpp" />
@@ -182,6 +183,7 @@
     <ClCompile Include="TicketRepository.cpp" />
     <ClCompile Include="TicketTypeModel.cpp" />
     <ClCompile Include="TicketTypeRepository.cpp" />
+    <ClCompile Include="TicketTypeService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="schema.sql" />
