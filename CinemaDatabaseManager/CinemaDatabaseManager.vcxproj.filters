@@ -25,6 +25,12 @@
     <Filter Include="Pliki nagłówkowe\Repositories">
       <UniqueIdentifier>{ef7f8eed-5ba0-4bb3-a778-bb11cda2b0cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\Services">
+      <UniqueIdentifier>{002ca5ad-9e09-4c4a-9af7-821474782e1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Services">
+      <UniqueIdentifier>{f868b2fa-7d08-41ac-9dc9-75b1baed91c8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h">
@@ -89,6 +95,9 @@
     </ClInclude>
     <ClInclude Include="EmployeeRepository.h">
       <Filter>Pliki nagłówkowe\Repositories</Filter>
+    </ClInclude>
+    <ClInclude Include="Service.h">
+      <Filter>Pliki nagłówkowe\Services</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
