@@ -66,7 +66,7 @@ int main() {
     };
 
     MainMenu Menu(services);
-    Menu.run();
+    Menu.show();
 
     return 0;
 }

@@ -1,58 +1,5 @@
 #include "CinemaUI.h"
 
-#include <iostream>
-#include <string>
-#include <iomanip>
-#include <vector>
-#include <limits>
-
-static void clearScreen() {
-	system("cls");
-}
-
-static void pause() {
-	std::cout << "Press enter to continue" << std::endl;
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-	if (std::cin.peek() == EOF) {
-		std::cin.clear();
-	}
-}
-
-static void printTitle(const std::string& t) {
-	clearScreen();
-	std::cout << std::endl << "*** " << t << " ***" << std::endl << std::endl;
-}
-
-static int readInt() {
-	int v;
-
-	while (!(std::cin >> v)) {
-		std::cin.clear();
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << "Enter a number: ";
-	}
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	return v;
-}
-
-static std::string readLine(const std::string& label, const std::string& def = "") {
-	if (!def.empty()) {
-		std::cout << label << " [" << def << "]: ";
-	}
-	else {
-		std::cout << label << ": ";
-	}
-
-	if (std::cin.peek() == '\n')
-		std::cin.get();
-
-	std::string s;
-	std::getline(std::cin, s);
-
-	return s.empty() ? def : s;
-}
-
 void CinemaUI::show() {
 	while (true) {
 		printTitle("Cinemas");

@@ -126,6 +126,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseUI.h" />
     <ClInclude Include="CinemaModel.h" />
     <ClInclude Include="CinemaRepository.h" />
     <ClInclude Include="CinemaService.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="TicketTypeService.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseUI.cpp" />
     <ClCompile Include="CinemaModel.cpp" />
     <ClCompile Include="CinemaRepository.cpp" />
     <ClCompile Include="CinemaService.cpp" />

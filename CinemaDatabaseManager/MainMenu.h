@@ -7,6 +7,7 @@
 #include "ScheduleService.h"
 #include "TicketService.h"
 #include "TicketTypeService.h"
+#include "BaseUI.h"
 
 struct AppServices {
     CinemaService& cinema;
@@ -19,10 +20,11 @@ struct AppServices {
     EmployeeService& employee;
 };
 
-class MainMenu {
+class MainMenu : public BaseUI {
 public:
     explicit MainMenu(AppServices& svc) : svc_(svc) {}
-    void run();
+    void show() override;
 private:
     AppServices& svc_;
+    void handleChoice(int choice);
 };

@@ -129,6 +129,9 @@
     <ClInclude Include="MainMenu.h">
       <Filter>Pliki nagłówkowe\UI</Filter>
     </ClInclude>
+    <ClInclude Include="BaseUI.h">
+      <Filter>Pliki nagłówkowe\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Database.cpp">
@@ -219,6 +222,9 @@
       <Filter>Pliki źródłowe\UI</Filter>
     </ClCompile>
     <ClCompile Include="MainMenu.cpp">
+      <Filter>Pliki źródłowe\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseUI.cpp">
       <Filter>Pliki źródłowe\UI</Filter>
     </ClCompile>
   </ItemGroup>

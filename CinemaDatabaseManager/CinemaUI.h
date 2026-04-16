@@ -1,11 +1,12 @@
 #pragma once
 
 #include "CinemaService.h"
+#include "BaseUI.h"
 
-class CinemaUI {
+class CinemaUI : public BaseUI {
 public:
 	explicit CinemaUI(CinemaService& svc) : svc_(svc) {}
-	void show();
+	void show() override;
 
 private:
     CinemaService& svc_;
