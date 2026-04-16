@@ -1,5 +1,6 @@
 #include "CinemaRepository.h"
 #include <stdexcept>
+#include <iostream>
 
 std::vector<Cinema> CinemaRepository::getAll() {
 	PGresult* res = db_.query("SELECT * FROM Cinema ORDER BY id");
@@ -37,12 +38,21 @@ Cinema CinemaRepository::getById(int id) {
 }
 
 bool CinemaRepository::add(const Cinema& c) {
-	const char* params[] = {
-		c.getName().c_str(),
-		c.getCity().c_str(),
-		c.getPostalCode().c_str(),
-		c.getHouseNumber().c_str()
+	std::cout << "C: " << c.getCity() << std::endl;
+
+	std::string name = c.getName();
+	std::string city = c.getCity();
+	std::string postalCode = c.getPostalCode();
+	std::string houseNumber = c.getHouseNumber();
+
+	const char* params[4] = {
+		name.c_str(),
+		city.c_str(),
+		postalCode.c_str(),
+		houseNumber.c_str()
 	};
+
+	std::cout << "P: " << params[0] << std::endl;
 
 	PGresult* res = db_.queryParams("INSERT INTO Cinema (name, city, postalcode, housenumber) VALUES ($1,$2,$3,$4)", 4, params);
 
@@ -55,11 +65,16 @@ bool CinemaRepository::add(const Cinema& c) {
 bool CinemaRepository::update(const Cinema& c) {
 	std::string sid = std::to_string(c.getId());
 
+	std::string name = c.getName();
+	std::string city = c.getCity();
+	std::string postalCode = c.getPostalCode();
+	std::string houseNumber = c.getHouseNumber();
+
 	const char* params[] = {
-		c.getName().c_str(),
-		c.getCity().c_str(),
-		c.getPostalCode().c_str(),
-		c.getHouseNumber().c_str(),
+		name.c_str(),
+		city.c_str(),
+		postalCode.c_str(),
+		houseNumber.c_str(),
 		sid.c_str()
 	};
 

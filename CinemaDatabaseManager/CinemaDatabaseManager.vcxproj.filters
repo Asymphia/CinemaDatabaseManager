@@ -31,15 +31,15 @@
     <Filter Include="Pliki źródłowe\Services">
       <UniqueIdentifier>{f868b2fa-7d08-41ac-9dc9-75b1baed91c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki nagłówkowe\UI">
+      <UniqueIdentifier>{632f7f6a-8549-4f8f-9a22-c88c19ad7e0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\UI">
+      <UniqueIdentifier>{5dd9c1ee-db3c-4a82-b6ff-f5d0a2fb9f65}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Database.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Menu.h">
-      <Filter>Pliki nagłówkowe</Filter>
-    </ClInclude>
-    <ClInclude Include="Statistics.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
     <ClInclude Include="Model.h">
@@ -123,18 +123,18 @@
     <ClInclude Include="EmployeeService.h">
       <Filter>Pliki nagłówkowe\Services</Filter>
     </ClInclude>
+    <ClInclude Include="CinemaUI.h">
+      <Filter>Pliki nagłówkowe\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenu.h">
+      <Filter>Pliki nagłówkowe\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Statistics.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="Database.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="Menu.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
     <ClCompile Include="CinemaRepository.cpp">
@@ -214,6 +214,12 @@
     </ClCompile>
     <ClCompile Include="EmployeeService.cpp">
       <Filter>Pliki źródłowe\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="CinemaUI.cpp">
+      <Filter>Pliki źródłowe\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenu.cpp">
+      <Filter>Pliki źródłowe\UI</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -129,6 +129,7 @@
     <ClInclude Include="CinemaModel.h" />
     <ClInclude Include="CinemaRepository.h" />
     <ClInclude Include="CinemaService.h" />
+    <ClInclude Include="CinemaUI.h" />
     <ClInclude Include="ClientModel.h" />
     <ClInclude Include="ClientRepository.h" />
     <ClInclude Include="ClientService.h" />
@@ -136,7 +137,7 @@
     <ClInclude Include="EmployeeModel.h" />
     <ClInclude Include="EmployeeRepository.h" />
     <ClInclude Include="EmployeeService.h" />
-    <ClInclude Include="Menu.h" />
+    <ClInclude Include="MainMenu.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="MovieModel.h" />
     <ClInclude Include="MovieRepository.h" />
@@ -149,7 +150,6 @@
     <ClInclude Include="ScheduleRepository.h" />
     <ClInclude Include="ScheduleService.h" />
     <ClInclude Include="Service.h" />
-    <ClInclude Include="Statistics.h" />
     <ClInclude Include="TicketModel.h" />
     <ClInclude Include="TicketRepository.h" />
     <ClInclude Include="TicketService.h" />
@@ -161,6 +161,7 @@
     <ClCompile Include="CinemaModel.cpp" />
     <ClCompile Include="CinemaRepository.cpp" />
     <ClCompile Include="CinemaService.cpp" />
+    <ClCompile Include="CinemaUI.cpp" />
     <ClCompile Include="ClientModel.cpp" />
     <ClCompile Include="ClientRepository.cpp" />
     <ClCompile Include="ClientService.cpp" />
@@ -171,7 +172,7 @@
     <ClCompile Include="EmployeeRepository.cpp" />
     <ClCompile Include="EmployeeService.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="MovieModel.cpp" />
     <ClCompile Include="MovieRepository.cpp" />
     <ClCompile Include="MovieService.cpp" />
@@ -181,7 +182,6 @@
     <ClCompile Include="ScheduleModel.cpp" />
     <ClCompile Include="ScheduleRepository.cpp" />
     <ClCompile Include="ScheduleService.cpp" />
-    <ClCompile Include="Statistics.cpp" />
     <ClCompile Include="TicketModel.cpp" />
     <ClCompile Include="TicketRepository.cpp" />
     <ClCompile Include="TicketService.cpp" />
