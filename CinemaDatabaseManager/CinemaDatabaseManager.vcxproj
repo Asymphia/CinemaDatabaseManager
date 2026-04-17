@@ -149,6 +149,7 @@
     <ClInclude Include="RoomModel.h" />
     <ClInclude Include="RoomRepository.h" />
     <ClInclude Include="RoomService.h" />
+    <ClInclude Include="RoomUI.h" />
     <ClInclude Include="ScheduleModel.h" />
     <ClInclude Include="ScheduleRepository.h" />
     <ClInclude Include="ScheduleService.h" />
@@ -187,6 +188,7 @@
     <ClCompile Include="RoomModel.cpp" />
     <ClCompile Include="RoomRepository.cpp" />
     <ClCompile Include="RoomService.cpp" />
+    <ClCompile Include="RoomUI.cpp" />
     <ClCompile Include="ScheduleModel.cpp" />
     <ClCompile Include="ScheduleRepository.cpp" />
     <ClCompile Include="ScheduleService.cpp" />

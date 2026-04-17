@@ -3,6 +3,7 @@
 #include "ClientUI.h"
 #include "EmployeeUI.h"
 #include "MovieUI.h"
+#include "RoomUI.h"
 
 void MainMenu::show() {
     while (true) {
@@ -46,6 +47,11 @@ void MainMenu::handleChoice(int choice) {
     }
     case 4: {
         MovieUI ui(svc_.movie);
+        ui.show();
+        break;
+    }
+    case 5: {
+        RoomUI ui(svc_.room);
         ui.show();
         break;
     }
