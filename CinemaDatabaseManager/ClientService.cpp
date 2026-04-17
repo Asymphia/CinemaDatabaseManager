@@ -25,10 +25,6 @@ Client ClientService::getById(int id) {
 	return repo_.getById(id);
 }
 
-Client ClientService::getByEmail(const std::string& email) {
-	return repo_.getByEmail(email);
-}
-
 bool ClientService::add(const Client& c) {
 	if (!validate(c)) return false;
 

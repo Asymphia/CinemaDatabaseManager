@@ -27,14 +27,6 @@ std::vector<Schedule> ScheduleService::getAll() {
 	return repo_.getAll();
 }
 
-std::vector<Schedule> ScheduleService::getByDate(const std::string& date) {
-	return repo_.getByDate(date);
-}
-
-std::vector<Schedule> ScheduleService::getByMovieId(int movieId) {
-	return repo_.getByMovieId(movieId);
-}
-
 Schedule ScheduleService::getById(int id) {
 	return repo_.getById(id);
 }

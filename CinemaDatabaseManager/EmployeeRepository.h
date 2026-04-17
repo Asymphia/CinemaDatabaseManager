@@ -14,8 +14,6 @@ public:
     bool update(const Employee& e) override;
     bool remove(int id) override;
 
-    std::vector<Employee> getByCinemaId(int cinemaId);
-
 private:
     Employee rowToEmployee(PGresult* res, int row);
 };

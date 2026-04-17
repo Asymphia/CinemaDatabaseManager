@@ -71,27 +71,6 @@ bool RoomRepository::remove(int id) {
 	return ok;
 }
 
-std::vector<Room> RoomRepository::getByCinemaId(int cinemaId) {
-	std::string sid = std::to_string(cinemaId);
-	const char* params[] = { sid.c_str() };
-
-	PGresult* res = db_.queryParams("SELECT id, seatsnum, cinemaid FROM Room WHERE cinemaid=$1 ORDER BY id", 1, params);
-
-	std::vector<Room> result;
-
-	if (!res) {
-		return result;
-	}
-
-	int rows = PQntuples(res);
-	for (int i = 0; i < rows; i++) {
-		result.push_back(rowToRoom(res, i));
-	}
-
-	Database::freeResult(res);
-	return result;
-}
-
 Room RoomRepository::rowToRoom(PGresult* res, int row) {
 	return Room(
 		colInt(res, row, 0),

@@ -11,8 +11,6 @@ public:
 	bool validate(const Schedule& s) override;
 
 	std::vector<Schedule> getAll();
-	std::vector<Schedule> getByDate(const std::string& date);
-	std::vector<Schedule> getByMovieId(int movieId);
 	Schedule getById(int id);
 	bool add(const Schedule& s);
 	bool update(const Schedule& s);

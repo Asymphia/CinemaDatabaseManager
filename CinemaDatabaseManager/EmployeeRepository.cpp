@@ -94,26 +94,6 @@ bool EmployeeRepository::remove(int id) {
     return ok;
 }
 
-std::vector<Employee> EmployeeRepository::getByCinemaId(int cinemaId) {
-    std::string sid = std::to_string(cinemaId);
-    const char* params[] = { sid.c_str() };
-
-    PGresult* res = db_.queryParams("SELECT id, cinemaid, name, surname, number, email FROM Employee WHERE cinemaid=$1 ORDER BY surname", 1, params);
-
-    std::vector<Employee> result;
-    if (!res) {
-        return result;
-    }
-
-    int rows = PQntuples(res);
-    for (int i = 0; i < rows; i++) {
-        result.push_back(rowToEmployee(res, i));
-    }
-
-    Database::freeResult(res);
-    return result;
-}
-
 Employee EmployeeRepository::rowToEmployee(PGresult* res, int row) {
     return Employee(
         colInt(res, row, 0),

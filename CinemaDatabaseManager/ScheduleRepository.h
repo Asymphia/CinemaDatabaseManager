@@ -14,9 +14,6 @@ public:
 	bool update(const Schedule& s) override;
 	bool remove(int id) override;
 
-	std::vector<Schedule> getByDate(const std::string& date);
-	std::vector<Schedule> getByMovieId(int movieId);
-
 private:
 	Schedule rowToSchedule(PGresult* res, int row);
 };

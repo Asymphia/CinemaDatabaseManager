@@ -14,9 +14,6 @@ public:
 	bool update(const Ticket& t) override;
 	bool remove(int id) override;
 
-	std::vector<Ticket> getByClientId(int clientId);
-	std::vector<Ticket> getByScheduleId(int scheduleId);
-
 private:
 	Ticket rowToTicket(PGresult* res, int row);
 };

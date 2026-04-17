@@ -19,10 +19,6 @@ std::vector<Room> RoomService::getAll() {
 	return repo_.getAll();
 }
 
-std::vector<Room> RoomService::getByCinemaId(int cinemaId) {
-	return repo_.getByCinemaId(cinemaId);
-}
-
 Room RoomService::getById(int id) {
 	return repo_.getById(id);
 }

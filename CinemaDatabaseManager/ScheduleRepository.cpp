@@ -92,48 +92,6 @@ bool ScheduleRepository::remove(int id) {
 	return ok;
 }
 
-std::vector<Schedule> ScheduleRepository::getByDate(const std::string& date) {
-	const char* params[] = { date.c_str() };
-
-	PGresult* res = db_.queryParams("SELECT id, roomid, movieid, date, time FROM Schedule WHERE date=$1 ORDER BY time", 1, params);
-
-	std::vector<Schedule> result;
-
-	if (!res) {
-		return result;
-	}
-
-	int rows = PQntuples(res);
-	for (int i = 0; i < rows; i++) {
-		result.push_back(rowToSchedule(res, i));
-	}
-
-	Database::freeResult(res);
-	return result;
-}
-
-std::vector<Schedule> ScheduleRepository::getByMovieId(int movieId) {
-	std::string sid = std::to_string(movieId);
-
-	const char* params[] = { sid.c_str() };
-
-	PGresult* res = db_.queryParams("SELECT id, roomid, movieid, date, time FROM Schedule WHERE movieid=$1 ORDER BY date, time", 1, params);
-
-	std::vector<Schedule> result;
-
-	if (!res) {
-		return result;
-	}
-
-	int rows = PQntuples(res);
-	for (int i = 0; i < rows; i++) {
-		result.push_back(rowToSchedule(res, i));
-	}
-
-	Database::freeResult(res);
-	return result;
-}
-
 Schedule ScheduleRepository::rowToSchedule(PGresult* res, int row) {
 	return Schedule(
 		colInt(res, row, 0),

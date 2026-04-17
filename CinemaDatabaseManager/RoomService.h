@@ -11,7 +11,6 @@ public:
 	bool validate(const Room& r) override;
 
 	std::vector<Room> getAll();
-	std::vector<Room> getByCinemaId(int cinemaId);
 	Room getById(int id);
 	bool add(const Room& r);
 	bool update(const Room& r);

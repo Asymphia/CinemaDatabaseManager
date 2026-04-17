@@ -26,10 +26,6 @@ std::vector<Employee> EmployeeService::getAll() {
 	return repo_.getAll();
 }
 
-std::vector<Employee> EmployeeService::getByCinemaId(int cinemaId) {
-	return repo_.getByCinemaId(cinemaId);
-}
-
 Employee EmployeeService::getById(int id) {
 	return repo_.getById(id);
 }

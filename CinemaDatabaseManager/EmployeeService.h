@@ -11,7 +11,6 @@ public:
 	bool validate(const Employee& e) override;
 
     std::vector<Employee> getAll();
-    std::vector<Employee> getByCinemaId(int cinemaId);
     Employee getById(int id);
     bool add(const Employee& e);
     bool update(const Employee& e);

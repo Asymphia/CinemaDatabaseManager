@@ -14,8 +14,6 @@ public:
 	bool update(const Client& c) override;
 	bool remove(int id) override;
 
-	Client getByEmail(const std::string& email);
-
 private:
 	Client rowToClient(PGresult* res, int row);
 };

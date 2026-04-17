@@ -11,8 +11,6 @@ public:
 	bool validate(const Ticket& t) override;
 
     std::vector<Ticket> getAll();
-    std::vector<Ticket> getByClientId(int clientId);
-    std::vector<Ticket> getByScheduleId(int scheduleId);
     Ticket getById(int id);
     bool add(const Ticket& t);
     bool update(const Ticket& t);

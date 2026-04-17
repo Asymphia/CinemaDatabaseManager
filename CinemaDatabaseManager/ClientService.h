@@ -12,7 +12,6 @@ public:
 
 	std::vector<Client> getAll();
 	Client getById(int id);
-	Client getByEmail(const std::string& email);
 	bool add(const Client& c);
 	bool update(const Client& c);
 	bool remove(int id);

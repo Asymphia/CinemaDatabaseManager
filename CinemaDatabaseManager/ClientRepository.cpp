@@ -91,21 +91,6 @@ bool ClientRepository::remove(int id) {
     return ok;
 }
 
-Client ClientRepository::getByEmail(const std::string& email) {
-    const char* params[] = { email.c_str() };
-
-    PGresult* res = db_.queryParams("SELECT id, name, surname, email, number FROM Client WHERE email=$1", 1, params);
-
-    if (!res || PQntuples(res) == 0) {
-        Database::freeResult(res);
-        throw std::runtime_error("Client not found: email=" + email);
-    }
-
-    Client c = rowToClient(res, 0);
-    Database::freeResult(res);
-    return c;
-}
-
 Client ClientRepository::rowToClient(PGresult* res, int row) {
     return Client(
         colInt(res, row, 0),

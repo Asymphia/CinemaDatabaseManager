@@ -14,14 +14,6 @@ std::vector<Ticket> TicketService::getAll() {
     return repo_.getAll();
 }
 
-std::vector<Ticket> TicketService::getByClientId(int clientId) {
-    return repo_.getByClientId(clientId);
-}
-
-std::vector<Ticket> TicketService::getByScheduleId(int scheduleId) {
-    return repo_.getByScheduleId(scheduleId);
-}
-
 Ticket TicketService::getById(int id) {
     return repo_.getById(id);
 }
