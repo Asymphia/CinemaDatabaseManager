@@ -48,6 +48,12 @@ bool TicketService::add(const Ticket& t) {
     return repo_.add(t);
 }
 
+bool TicketService::update(const Ticket& t) {
+    if (!validate(t)) return false;
+
+    return repo_.update(t);
+}
+
 bool TicketService::remove(int id) {
     return repo_.remove(id);
 }

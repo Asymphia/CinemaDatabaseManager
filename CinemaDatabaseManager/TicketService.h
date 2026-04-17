@@ -16,6 +16,7 @@ public:
     std::vector<Ticket> getByScheduleId(int scheduleId);
     Ticket getById(int id);
     bool add(const Ticket& t);
+    bool update(const Ticket& t);
     bool remove(int id);
 
 private:
