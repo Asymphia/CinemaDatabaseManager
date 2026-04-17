@@ -8,8 +8,8 @@ bool ClientService::validate(const Client& c) {
 		return false;
 	}
 
-	std::regex emailPattern(R"([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})");
-	if (std::regex_match(c.getEmail(), emailPattern)) {
+	std::regex emailPattern(R"(.+@.+\..+)");
+	if (!std::regex_match(c.getEmail(), emailPattern)) {
 		std::cerr << "Invalid email" << std::endl;
 		return false;
 	}

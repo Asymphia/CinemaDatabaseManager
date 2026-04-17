@@ -37,11 +37,16 @@ Client ClientRepository::getById(int id) {
 }
 
 bool ClientRepository::add(const Client& c) {
+    std::string name = c.getName();
+    std::string surname = c.getSurname();
+    std::string email = c.getEmail();
+    std::string number = c.getNumber();
+
     const char* params[] = {
-        c.getName().c_str(),
-        c.getSurname().c_str(),
-        c.getEmail().c_str(),
-        c.getNumber().c_str()
+        name.c_str(),
+        surname.c_str(),
+        email.c_str(),
+        number.c_str()
     };
 
     PGresult* res = db_.queryParams("INSERT INTO Client (name, surname, email, number) VALUES ($1,$2,$3,$4)", 4, params);
@@ -54,11 +59,16 @@ bool ClientRepository::add(const Client& c) {
 bool ClientRepository::update(const Client& c) {
     std::string sid = std::to_string(c.getId());
 
+    std::string name = c.getName();
+    std::string surname = c.getSurname();
+    std::string email = c.getEmail();
+    std::string number = c.getNumber();
+
     const char* params[] = {
-        c.getName().c_str(),
-        c.getSurname().c_str(),
-        c.getEmail().c_str(),
-        c.getNumber().c_str(),
+        name.c_str(),
+        surname.c_str(),
+        email.c_str(),
+        number.c_str(),
         sid.c_str()
     };
 
