@@ -153,6 +153,7 @@
     <ClInclude Include="ScheduleModel.h" />
     <ClInclude Include="ScheduleRepository.h" />
     <ClInclude Include="ScheduleService.h" />
+    <ClInclude Include="ScheduleUI.h" />
     <ClInclude Include="Service.h" />
     <ClInclude Include="TicketModel.h" />
     <ClInclude Include="TicketRepository.h" />
@@ -192,6 +193,7 @@
     <ClCompile Include="ScheduleModel.cpp" />
     <ClCompile Include="ScheduleRepository.cpp" />
     <ClCompile Include="ScheduleService.cpp" />
+    <ClCompile Include="ScheduleUI.cpp" />
     <ClCompile Include="TicketModel.cpp" />
     <ClCompile Include="TicketRepository.cpp" />
     <ClCompile Include="TicketService.cpp" />

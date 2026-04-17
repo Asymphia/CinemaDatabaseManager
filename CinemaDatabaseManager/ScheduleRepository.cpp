@@ -40,11 +40,14 @@ bool ScheduleRepository::add(const Schedule& s) {
 	std::string sRoomId = std::to_string(s.getRoomId());
 	std::string sMovieId = std::to_string(s.getMovieId());
 
+	std::string date = s.getDate();
+	std::string time = s.getTime();
+
 	const char* params[] = {
 		sRoomId.c_str(),
 		sMovieId.c_str(),
-		s.getDate().c_str(),
-		s.getTime().c_str()
+		date.c_str(),
+		time.c_str()
 	};
 
 	PGresult* res = db_.queryParams("INSERT INTO Schedule (roomid, movieid, date, time) VALUES ($1,$2,$3,$4)", 4, params);
@@ -59,11 +62,14 @@ bool ScheduleRepository::update(const Schedule& s) {
 	std::string sRoomId = std::to_string(s.getRoomId());
 	std::string sMovieId = std::to_string(s.getMovieId());
 
+	std::string date = s.getDate();
+	std::string time = s.getTime();
+
 	const char* params[] = {
 		sRoomId.c_str(),
 		sMovieId.c_str(),
-		s.getDate().c_str(),
-		s.getTime().c_str(),
+		date.c_str(),
+		time.c_str(),
 		sid.c_str()
 	};
 

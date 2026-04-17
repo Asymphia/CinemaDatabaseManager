@@ -8,14 +8,14 @@ bool ScheduleService::validate(const Schedule& s) {
 		return false;
 	}
 
-	std::regex datePattern(R"(\d{4}-\d{2}-\d{2})");
-	if (std::regex_match(s.getDate(), datePattern) || s.getDate().size() != 10) {
+	std::regex datePattern(R"(\d{2}-\d{2}-\d{4})");
+	if (!std::regex_match(s.getDate(), datePattern) || s.getDate().size() != 10) {
 		std::cerr << "Enter valid date" << std::endl;
 		return false;
 	}
 
 	std::regex timePattern(R"(\d{2}:\d{2})");
-	if (std::regex_match(s.getTime().substr(0, 5), timePattern) || s.getTime().size() < 4) {
+	if (!std::regex_match(s.getTime().substr(0, 5), timePattern) || s.getTime().size() < 4) {
 		std::cerr << "Enter valid time" << std::endl;
 		return false;
 	}
