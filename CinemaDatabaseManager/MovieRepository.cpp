@@ -38,9 +38,12 @@ Movie MovieRepository::getById(int id) {
 bool MovieRepository::add(const Movie& m) {
 	std::string sDuration = std::to_string(m.getDuration());
 
+	std::string title = m.getTitle();
+	std::string description = m.getDescription();
+
 	const char* params[] = {
-		m.getTitle().c_str(),
-		m.getDescription().c_str(),
+		title.c_str(),
+		description.c_str(),
 		sDuration.c_str()
 	};
 
@@ -55,9 +58,12 @@ bool MovieRepository::update(const Movie& m) {
 	std::string sid = std::to_string(m.getId());
 	std::string sDuration = std::to_string(m.getDuration());
 
+	std::string title = m.getTitle();
+	std::string description = m.getDescription();
+
 	const char* params[] = {
-		m.getTitle().c_str(),
-		m.getDescription().c_str(),
+		title.c_str(),
+		description.c_str(),
 		sDuration.c_str(),
 		sid.c_str()
 	};

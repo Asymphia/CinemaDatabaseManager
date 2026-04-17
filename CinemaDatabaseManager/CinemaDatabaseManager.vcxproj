@@ -182,6 +182,8 @@
     <ClCompile Include="MovieModel.cpp" />
     <ClCompile Include="MovieRepository.cpp" />
     <ClCompile Include="MovieService.cpp" />
+    <ClCompile Include="MovieUI.cpp" />
+    <ClCompile Include="MovieUI.h" />
     <ClCompile Include="RoomModel.cpp" />
     <ClCompile Include="RoomRepository.cpp" />
     <ClCompile Include="RoomService.cpp" />
