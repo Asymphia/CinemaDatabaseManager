@@ -9,10 +9,6 @@ int Client::getId() const {
     return id_;
 }
 
-std::string Client::getTableName() const {
-    return "Client";
-}
-
 std::string Client::toString() const {
     std::ostringstream oss;
 

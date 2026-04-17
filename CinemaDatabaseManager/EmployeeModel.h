@@ -10,7 +10,6 @@ public:
         const std::string& email);
 
     int getId() const override;
-    std::string getTableName() const override;
     std::string toString() const override;
 
     int getCinemaId() const;

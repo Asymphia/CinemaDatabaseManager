@@ -8,7 +8,6 @@ public:
 	Room(int id, int seatsNum, int cinemaId);
 
 	int getId() const override;
-	std::string getTableName() const override;
 	std::string toString() const override;
 
 	int getSeatsNum() const;

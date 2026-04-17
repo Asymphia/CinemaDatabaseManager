@@ -9,7 +9,6 @@ public:
 	explicit ScheduleService(ScheduleRepository& repo) : repo_(repo) {}
 
 	bool validate(const Schedule& s) override;
-	std::vector<Schedule> sort(std::vector<Schedule> items, const std::string& field, bool ascening = true) override;
 
 	std::vector<Schedule> getAll();
 	std::vector<Schedule> getByDate(const std::string& date);

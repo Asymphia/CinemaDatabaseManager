@@ -23,23 +23,6 @@ bool ScheduleService::validate(const Schedule& s) {
 	return true;
 }
 
-std::vector<Schedule> ScheduleService::sort(std::vector<Schedule> items, const std::string& field, bool ascening) {
-	auto cmp = [&](const Schedule& a, const Schedule& b) {
-		bool result = false;
-
-		if (field == "date") result = a.getDate() < b.getDate();
-		else if (field == "time") result = a.getTime() < b.getTime();
-		else if (field == "movieid") result = a.getMovieId() < b.getMovieId();
-		else if (field == "roomid") result = a.getRoomId() < b.getRoomId();
-		else result = a.getId() < b.getId();
-
-		return ascening ? result : !result;
-	};
-
-	std::sort(items.begin(), items.end(), cmp);
-	return items;
-}
-
 std::vector<Schedule> ScheduleService::getAll() {
 	return repo_.getAll();
 }

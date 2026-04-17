@@ -9,7 +9,6 @@ public:
 		const std::string& date, const std::string& time);
 
 	int getId() const override;
-	std::string getTableName() const override;
 	std::string toString() const override;
 
 	int getRoomId() const;

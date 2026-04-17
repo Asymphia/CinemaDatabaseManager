@@ -9,10 +9,6 @@ int Movie::getId() const {
 	return id_;
 }
 
-std::string Movie::getTableName() const {
-	return "Movie";
-}
-
 std::string Movie::toString() const {
 	std::ostringstream oss;
 

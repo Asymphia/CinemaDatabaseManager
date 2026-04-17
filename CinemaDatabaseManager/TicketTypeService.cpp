@@ -15,21 +15,6 @@ bool TicketTypeService::validate(const TicketType& tt) {
 	return true;
 }
 
-std::vector<TicketType> TicketTypeService::sort(std::vector<TicketType> items, const std::string& field, bool ascending) {
-	auto cmp = [&](const TicketType& a, const TicketType& b) {
-		bool result = false;
-
-		if (field == "type") result = a.getType() < b.getType();
-		else if (field == "price") result = a.getPrice() < b.getPrice();
-		else result = a.getId() < b.getId();
-
-		return ascending ? result : !result;
-	};
-
-	std::sort(items.begin(), items.end(), cmp);
-	return items;
-}
-
 std::vector<TicketType> TicketTypeService::getAll() {
 	return repo_.getAll();
 }

@@ -8,10 +8,6 @@ int Room::getId() const {
 	return id_;
 }
 
-std::string Room::getTableName() const {
-	return "Room";
-}
-
 std::string Room::toString() const {
 	std::ostringstream oss;
 

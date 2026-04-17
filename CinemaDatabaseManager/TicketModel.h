@@ -8,7 +8,6 @@ public:
 	Ticket(int id, int scheduleId, int clientId, int ticketTypeId);
 
 	int getId() const override;
-	std::string getTableName() const override;
 	std::string toString() const override;
 
 	int getScheduleId() const;

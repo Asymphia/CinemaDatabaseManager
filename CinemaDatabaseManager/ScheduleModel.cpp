@@ -10,10 +10,6 @@ int Schedule::getId() const {
 	return id_;
 }
 
-std::string Schedule::getTableName() const {
-	return "Schedule";
-}
-
 std::string Schedule::toString() const {
 	std::ostringstream oss;
 

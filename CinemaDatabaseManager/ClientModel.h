@@ -9,7 +9,6 @@ public:
         const std::string& email, const std::string& number);
 
     int getId() const override;
-    std::string getTableName() const override;
     std::string toString() const override;
 
     std::string getName() const;

@@ -9,7 +9,6 @@ public:
 		const std::string& description, int duration);
 
 	int getId() const override;
-	std::string getTableName() const override;
 	std::string toString() const override;
 
 	std::string getTitle() const;

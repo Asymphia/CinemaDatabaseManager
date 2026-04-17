@@ -9,7 +9,6 @@ public:
 	explicit RoomService(RoomRepository& repo) : repo_(repo) {}
 
 	bool validate(const Room& r) override;
-	std::vector<Room> sort(std::vector<Room> items, const std::string& field, bool ascending = true) override;
 
 	std::vector<Room> getAll();
 	std::vector<Room> getByCinemaId(int cinemaId);

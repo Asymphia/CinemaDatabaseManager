@@ -9,10 +9,6 @@ int Ticket::getId() const {
     return id_;
 }
 
-std::string Ticket::getTableName() const {
-    return "Ticket";
-}
-
 std::string Ticket::toString() const {
     std::ostringstream oss;
 

@@ -22,23 +22,6 @@ bool EmployeeService::validate(const Employee& e) {
 	return true;
 }
 
-std::vector<Employee> EmployeeService::sort(std::vector<Employee> items, const std::string& field, bool ascending) {
-	auto cmp = [&](const Employee& a, const Employee& b) {
-		bool result = false;
-
-		if (field == "name") result = a.getName() < b.getName();
-		else if (field == "surname") result = a.getSurname() < b.getSurname();
-		else if (field == "email") result = a.getEmail() < b.getEmail();
-		else if (field == "cinemaid") result = a.getCinemaId() < b.getCinemaId();
-		else result = a.getId() < b.getId();
-
-		return ascending ? result : !result;
-	};
-
-	std::sort(items.begin(), items.end(), cmp);
-	return items;
-}
-
 std::vector<Employee> EmployeeService::getAll() {
 	return repo_.getAll();
 }

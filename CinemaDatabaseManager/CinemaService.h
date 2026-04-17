@@ -9,7 +9,6 @@ public:
 	explicit CinemaService(CinemaRepository& repo) : repo_(repo) {}
 
 	bool validate(const Cinema& c) override;
-	std::vector<Cinema> sort(std::vector<Cinema> items, const std::string& field, bool ascending = true) override;
 
 	std::vector<Cinema> getAll();
 	Cinema getById(int id);

@@ -9,7 +9,6 @@ public:
 	explicit ClientService(ClientRepository& repo) : repo_(repo) {}
 
 	bool validate(const Client& c) override;
-	std::vector<Client> sort(std::vector<Client> items, const std::string& field, bool ascending = true) override;
 
 	std::vector<Client> getAll();
 	Client getById(int id);

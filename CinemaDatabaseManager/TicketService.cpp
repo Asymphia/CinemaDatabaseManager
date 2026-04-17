@@ -10,22 +10,6 @@ bool TicketService::validate(const Ticket& t) {
 	return true;
 }
 
-std::vector<Ticket> TicketService::sort(std::vector<Ticket> items, const std::string& field, bool ascending) {
-    auto cmp = [&](const Ticket& a, const Ticket& b) {
-        bool result = false;
-
-        if (field == "scheduleid") result = a.getScheduleId() < b.getScheduleId();
-        else if (field == "clientid") result = a.getClientId() < b.getClientId();
-        else if (field == "tickettypeid") result = a.getTicketTypeId() < b.getTicketTypeId();
-        else result = a.getId() < b.getId();
-
-        return ascending ? result : !result;
-    };
-
-    std::sort(items.begin(), items.end(), cmp);
-    return items;
-}
-
 std::vector<Ticket> TicketService::getAll() {
     return repo_.getAll();
 }

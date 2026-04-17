@@ -9,7 +9,6 @@ public:
 	explicit TicketTypeService(TicketTypeRepository& repo) : repo_(repo) {}
 
 	bool validate(const TicketType& tt) override;
-	std::vector<TicketType> sort(std::vector<TicketType> items, const std::string& field, bool ascending = true) override;
 
 	std::vector<TicketType> getAll();
 	TicketType getById(int id);

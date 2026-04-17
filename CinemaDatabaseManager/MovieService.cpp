@@ -15,21 +15,6 @@ bool MovieService::validate(const Movie& m) {
 	return true;
 }
 
-std::vector<Movie> MovieService::sort(std::vector<Movie> items, const std::string& field, bool ascending) {
-	auto cmp = [&](const Movie& a, const Movie& b) {
-		bool result = false;
-
-		if (field == "title") result = a.getTitle() < b.getTitle();
-		else if (field == "duration") result = a.getDuration() < b.getDuration();
-		else result = a.getId() < b.getId();
-
-		return ascending ? result : !result;
-	};
-
-	std::sort(items.begin(), items.end(), cmp);
-	return items;
-}
-
 std::vector<Movie> MovieService::getAll() {
 	return repo_.getAll();
 }

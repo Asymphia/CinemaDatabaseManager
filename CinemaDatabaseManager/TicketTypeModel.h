@@ -8,7 +8,6 @@ public:
 	TicketType(int id, const std::string& type, double price);
 
 	int getId() const override;
-	std::string getTableName() const override;
 	std::string toString() const override;
 
 	std::string getType() const;

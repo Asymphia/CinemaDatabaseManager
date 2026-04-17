@@ -12,10 +12,6 @@ int Cinema::getId() const {
 	return id_;
 }
 
-std::string Cinema::getTableName() const {
-	return "Cinema";
-}
-
 std::string Cinema::toString() const {
 	std::ostringstream oss;
 

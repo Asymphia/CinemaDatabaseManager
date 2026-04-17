@@ -17,22 +17,6 @@ bool ClientService::validate(const Client& c) {
 	return true;
 }
 
-std::vector<Client> ClientService::sort(std::vector<Client> items, const std::string& field, bool ascending) {
-	auto cmp = [&](const Client& a, const Client& b) {
-		bool result = false;
-
-		if (field == "name") result = a.getName() < b.getName();
-		else if (field == "surname") result = a.getSurname() < b.getSurname();
-		else if (field == "email") result = a.getEmail() < b.getEmail();
-		else result = a.getId() < b.getId();
-
-		return ascending ? result : !result;
-	};
-
-	std::sort(items.begin(), items.end(), cmp);
-	return items;
-}
-
 std::vector<Client> ClientService::getAll() {
 	return repo_.getAll();
 }

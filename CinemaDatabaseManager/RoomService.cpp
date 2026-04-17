@@ -15,21 +15,6 @@ bool RoomService::validate(const Room& r) {
 	return true;
 }
 
-std::vector<Room> RoomService::sort(std::vector<Room> items, const std::string& field, bool ascending) {
-	auto cmp = [&](const Room& a, const Room& b) {
-		bool result = false;
-
-		if (field == "seats") result = a.getSeatsNum() < b.getSeatsNum();
-		else if (field == "cinamaId") result = a.getCinemaId() < b.getCinemaId();
-		else result = a.getId() < b.getId();
-
-		return ascending ? result : !result;
-	};
-
-	std::sort(items.begin(), items.end(), cmp);
-	return items;
-}
-
 std::vector<Room> RoomService::getAll() {
 	return repo_.getAll();
 }

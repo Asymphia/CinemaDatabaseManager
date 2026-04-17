@@ -9,7 +9,6 @@ public:
 	explicit EmployeeService(EmployeeRepository& repo) : repo_(repo) {}
 
 	bool validate(const Employee& e) override;
-	std::vector<Employee> sort(std::vector<Employee> items, const std::string& field, bool ascending = true) override;
 
     std::vector<Employee> getAll();
     std::vector<Employee> getByCinemaId(int cinemaId);

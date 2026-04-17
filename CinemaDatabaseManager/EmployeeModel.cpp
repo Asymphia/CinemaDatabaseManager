@@ -11,10 +11,6 @@ int Employee::getId() const {
     return id_;
 }
 
-std::string Employee::getTableName() const {
-    return "Employee";
-}
-
 std::string Employee::toString() const {
     std::ostringstream oss;
 

@@ -9,7 +9,6 @@ public:
 	explicit MovieService(MovieRepository& repo) : repo_(repo) {}
 
 	bool validate(const Movie& m) override;
-	std::vector<Movie> sort(std::vector<Movie> items, const std::string& field, bool ascending = true) override;
 
 	std::vector<Movie> getAll();
 	Movie getById(int id);
