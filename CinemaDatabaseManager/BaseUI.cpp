@@ -6,7 +6,7 @@ void BaseUI::clearScreen() const {
 
 void BaseUI::pause() const {
 	std::cout << std::endl << "Press enter to continue";
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	std::cin.get();
 }
 
 void BaseUI::printTitle(const std::string& title) const {

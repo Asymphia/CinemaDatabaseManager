@@ -1,6 +1,7 @@
 #include "MainMenu.h"
 #include "CinemaUI.h"
 #include "ClientUI.h"
+#include "EmployeeUI.h"
 
 void MainMenu::show() {
     while (true) {
@@ -34,6 +35,11 @@ void MainMenu::handleChoice(int choice) {
     }
     case 2: {
         ClientUI ui(svc_.client);
+        ui.show();
+        break;
+    }
+    case 3: {
+        EmployeeUI ui(svc_.employee);
         ui.show();
         break;
     }

@@ -1,8 +1,8 @@
-#include "ClientUI.h"
+#include "EmployeeUI.h"
 
-void ClientUI::show() {
+void EmployeeUI::show() {
 	while (true) {
-		printTitle("Clients");
+		printTitle("Employees");
 
 		std::cout << "1. View all" << std::endl;
 		std::cout << "2. Add new" << std::endl;
@@ -28,24 +28,25 @@ void ClientUI::show() {
 	}
 }
 
-void ClientUI::viewAll() {
-	printTitle("All clients");
+void EmployeeUI::viewAll() {
+	printTitle("All employees");
 
-	auto clients = svc_.getAll();
+	auto employees = svc_.getAll();
 
-	if (clients.empty()) {
-		std::cout << "No clients found." << std::endl;
+	if (employees.empty()) {
+		std::cout << "No employees found." << std::endl;
 		pause();
 
 		return;
 	}
 
-	for (auto& c : clients) {
-		std::cout << "ID: " << c.getId();
-		std::cout << ", Name: " << c.getName();
-		std::cout << ", Surname: " << c.getSurname();
-		std::cout << ", E-mail: " << c.getEmail();
-		std::cout << ", Phone number: " << c.getNumber();
+	for (auto& e : employees) {
+		std::cout << "ID: " << e.getId();
+		std::cout << ", Cinema: " << e.getCinemaId();
+		std::cout << ", Name: " << e.getName();
+		std::cout << ", Surname: " << e.getSurname();
+		std::cout << ", Phone number: " << e.getNumber();
+		std::cout << ", E-mail: " << e.getEmail();
 		std::cout << std::endl;
 	}
 
@@ -58,18 +59,19 @@ void ClientUI::viewAll() {
 		showDetail(svc_.getById(id));
 	}
 	catch (...) {
-		std::cout << "No client found" << std::endl;
+		std::cout << "No employee found" << std::endl;
 		pause();
 	}
 }
 
-void ClientUI::showDetail(const Client& c) {
-	printTitle("Client" + std::to_string(c.getId()));
+void EmployeeUI::showDetail(const Employee& e) {
+	printTitle("Employee" + std::to_string(e.getId()));
 
-	std::cout << "Name: " << c.getName() << std::endl;
-	std::cout << "Surname: " << c.getSurname() << std::endl;
-	std::cout << "E-mail: " << c.getEmail() << std::endl;
-	std::cout << "Phone number: " << c.getNumber() << std::endl;
+	std::cout << "Cinema: " << e.getCinemaId() << std::endl;
+	std::cout << "Name: " << e.getName() << std::endl;
+	std::cout << "Surname: " << e.getSurname() << std::endl;
+	std::cout << "E-mail: " << e.getEmail() << std::endl;
+	std::cout << "Phone number: " << e.getNumber() << std::endl;
 
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
@@ -79,10 +81,10 @@ void ClientUI::showDetail(const Client& c) {
 
 	switch (ch) {
 	case 1:
-		editClient(c);
+		editEmployee(e);
 		break;
 	case 2: {
-		if (svc_.remove(c.getId())) {
+		if (svc_.remove(e.getId())) {
 			std::cout << "Deleted" << std::endl;
 		}
 		else {
@@ -93,24 +95,26 @@ void ClientUI::showDetail(const Client& c) {
 	}
 }
 
-void ClientUI::addNew() {
-	printTitle("Add client");
+void EmployeeUI::addNew() {
+	printTitle("Add employee");
 
+	std::cout << "Cinema Id: ";
+	int cinemaId = readInt();
 	std::string name = readLine("Name");
 	std::string surname = readLine("Surname");
 	std::string email = readLine("E-mail");
 	std::string phone = readLine("Phone number");
 
-	if (name.empty() || surname.empty() || email.empty() || phone.empty()) {
+	if (!cinemaId || name.empty() || surname.empty() || email.empty() || phone.empty()) {
 		std::cout << "All fields required." << std::endl;
 		pause();
 
 		return;
 	}
 
-	Client c(0, name, surname, email, phone);
+	Employee e(0, cinemaId, name, surname, phone, email);
 
-	if (svc_.add(c)) {
+	if (svc_.add(e)) {
 		std::cout << "Added" << std::endl;
 	}
 	else {
@@ -120,15 +124,17 @@ void ClientUI::addNew() {
 	pause();
 }
 
-void ClientUI::editClient(const Client& c) {
-	printTitle("Edit client");
+void EmployeeUI::editEmployee(const Employee& e) {
+	printTitle("Edit employee");
 
+	std::cout << "Cinema Id: ";
+	int cinemaId = readInt();
 	std::string name = readLine("Name");
 	std::string surname = readLine("Surname");
 	std::string email = readLine("E-mail");
 	std::string phone = readLine("Phone number");
 
-	Client updated(0, name, surname, email, phone);
+	Employee updated(0, cinemaId, name, surname, phone, email);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;
@@ -140,17 +146,17 @@ void ClientUI::editClient(const Client& c) {
 	pause();
 }
 
-void ClientUI::searchById() {
+void EmployeeUI::searchById() {
 	printTitle("Search by ID");
 
-	std::cout << "Client ID: ";
+	std::cout << "Employee ID: ";
 	int id = readInt();
 
 	try {
 		showDetail(svc_.getById(id));
 	}
 	catch (...) {
-		std::cout << "Client not found" << std::endl;
+		std::cout << "Employee not found" << std::endl;
 		pause();
 	}
 }

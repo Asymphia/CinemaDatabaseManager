@@ -36,14 +36,19 @@ Employee EmployeeRepository::getById(int id) {
 }
 
 bool EmployeeRepository::add(const Employee& e) {
+    std::string name = e.getName();
+    std::string surname = e.getSurname();
+    std::string number = e.getNumber();
+    std::string email = e.getEmail();
+
     std::string sCinemaId = std::to_string(e.getCinemaId());
 
     const char* params[] = {
         sCinemaId.c_str(),
-        e.getName().c_str(),
-        e.getSurname().c_str(),
-        e.getNumber().c_str(),
-        e.getEmail().c_str()
+        name.c_str(),
+        surname.c_str(),
+        number.c_str(),
+        email.c_str()
     };
 
     PGresult* res = db_.queryParams("INSERT INTO Employee (cinemaid, name, surname, number, email) VALUES ($1,$2,$3,$4,$5)", 5, params);
@@ -54,15 +59,20 @@ bool EmployeeRepository::add(const Employee& e) {
 }
 
 bool EmployeeRepository::update(const Employee& e) {
+    std::string name = e.getName();
+    std::string surname = e.getSurname();
+    std::string number = e.getNumber();
+    std::string email = e.getEmail();
+
     std::string sid = std::to_string(e.getId());
     std::string sCinemaId = std::to_string(e.getCinemaId());
 
     const char* params[] = {
         sCinemaId.c_str(),
-        e.getName().c_str(),
-        e.getSurname().c_str(),
-        e.getNumber().c_str(),
-        e.getEmail().c_str(),
+        name.c_str(),
+        surname.c_str(),
+        number.c_str(),
+        email.c_str(),
         sid.c_str()
     };
 

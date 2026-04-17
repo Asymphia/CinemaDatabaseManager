@@ -13,8 +13,8 @@ bool EmployeeService::validate(const Employee& e) {
 		return false;
 	}
 
-	std::regex emailPattern(R"([a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,})");
-	if (std::regex_match(e.getEmail(), emailPattern)) {
+	std::regex emailPattern(R"(.+@.+\..+)");
+	if (!std::regex_match(e.getEmail(), emailPattern)) {
 		std::cerr << "Invalid email" << std::endl;
 		return false;
 	}
