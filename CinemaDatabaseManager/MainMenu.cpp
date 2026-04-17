@@ -6,6 +6,7 @@
 #include "RoomUI.h"
 #include "ScheduleUI.h"
 #include "TicketUI.h"
+#include "TicketTypeUI.h"
 
 void MainMenu::show() {
     while (true) {
@@ -64,6 +65,11 @@ void MainMenu::handleChoice(int choice) {
     }
     case 7: {
         TicketUI ui(svc_.ticket);
+        ui.show();
+        break;
+    }
+    case 8: {
+        TicketTypeUI ui(svc_.ticketType);
         ui.show();
         break;
     }

@@ -147,6 +147,9 @@
     <ClInclude Include="TicketUI.h">
       <Filter>Pliki nagłówkowe\UI</Filter>
     </ClInclude>
+    <ClInclude Include="TicketTypeUI.h">
+      <Filter>Pliki nagłówkowe\UI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Database.cpp">
@@ -261,6 +264,9 @@
       <Filter>Pliki źródłowe\UI</Filter>
     </ClCompile>
     <ClCompile Include="TicketUI.cpp">
+      <Filter>Pliki źródłowe\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="TicketTypeUI.cpp">
       <Filter>Pliki źródłowe\UI</Filter>
     </ClCompile>
   </ItemGroup>

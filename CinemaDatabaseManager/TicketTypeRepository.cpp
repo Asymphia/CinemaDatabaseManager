@@ -37,7 +37,13 @@ TicketType TicketTypeRepository::getById(int id) {
 
 bool TicketTypeRepository::add(const TicketType& tt) {
     std::string sPrice = std::to_string(tt.getPrice());
-    const char* params[] = { tt.getType().c_str(), sPrice.c_str() };
+
+    std::string type = tt.getType();
+
+    const char* params[] = { 
+        type.c_str(), 
+        sPrice.c_str() 
+    };
 
     PGresult* res = db_.queryParams("INSERT INTO TicketType (type, price) VALUES ($1,$2)", 2, params);
 
@@ -49,7 +55,13 @@ bool TicketTypeRepository::add(const TicketType& tt) {
 bool TicketTypeRepository::update(const TicketType& tt) {
     std::string sid = std::to_string(tt.getId());
     std::string sPrice = std::to_string(tt.getPrice());
-    const char* params[] = { tt.getType().c_str(), sPrice.c_str(), sid.c_str() };
+
+    std::string type = tt.getType();
+
+    const char* params[] = { 
+        type.c_str(), 
+        sPrice.c_str(), sid.c_str() 
+    };
 
     PGresult* res = db_.queryParams("UPDATE TicketType SET type=$1, price=$2 WHERE id=$3", 3, params);
 
