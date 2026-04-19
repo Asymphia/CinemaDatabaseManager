@@ -11,14 +11,6 @@ int Employee::getId() const {
     return id_;
 }
 
-std::string Employee::toString() const {
-    std::ostringstream oss;
-
-    oss << "[" << id_ << "] " << name_ << " " << surname_ << " | " << email_ << " | " << number_ << " | CinemaId: " << cinemaId_;
-
-    return oss.str();
-}
-
 int Employee::getCinemaId() const {
     return cinemaId_;
 }

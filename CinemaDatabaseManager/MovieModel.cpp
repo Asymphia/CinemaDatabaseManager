@@ -1,5 +1,4 @@
 #include "MovieModel.h"
-#include <sstream>
 
 Movie::Movie(int id, const std::string& title,
 	const std::string& description, int duration)
@@ -7,14 +6,6 @@ Movie::Movie(int id, const std::string& title,
 
 int Movie::getId() const {
 	return id_;
-}
-
-std::string Movie::toString() const {
-	std::ostringstream oss;
-
-	oss << "[" << id_ << "] " << title_ << " | " << duration_ << " min" << " | " << description_;
-
-	return oss.str();
 }
 
 std::string Movie::getTitle() const {

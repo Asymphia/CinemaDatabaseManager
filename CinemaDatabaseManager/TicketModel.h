@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Model.h"
+#include <string>
 
 class Ticket : public Model {
 public:
@@ -8,7 +9,6 @@ public:
 	Ticket(int id, int scheduleId, int clientId, int ticketTypeId);
 
 	int getId() const override;
-	std::string toString() const override;
 
 	int getScheduleId() const;
 	int getClientId() const;

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Model.h"
+#include <string>
 
 class Employee : public Model {
 public:
@@ -10,7 +11,6 @@ public:
         const std::string& email);
 
     int getId() const override;
-    std::string toString() const override;
 
     int getCinemaId() const;
     std::string getName() const;

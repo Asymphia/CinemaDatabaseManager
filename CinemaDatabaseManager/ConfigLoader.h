@@ -1,8 +1,6 @@
 #pragma once
 #include <string>
 
-/* Reading config from .ini file */
-
 class ConfigLoader {
 public:
 	explicit ConfigLoader(const std::string& filePath = "config.ini");

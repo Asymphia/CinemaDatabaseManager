@@ -12,14 +12,6 @@ int Cinema::getId() const {
 	return id_;
 }
 
-std::string Cinema::toString() const {
-	std::ostringstream oss;
-
-	oss << "[" << id_ << "] " << name_ << " | " << city_ << " " << postalCode_ << " " << houseNumber_;
-
-	return oss.str();
-}
-
 std::string Cinema::getName() const {
 	return name_;
 }

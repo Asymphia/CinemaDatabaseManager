@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Model.h"
+#include <string>
 
 class Movie : public Model {
 public:
@@ -9,7 +10,6 @@ public:
 		const std::string& description, int duration);
 
 	int getId() const override;
-	std::string toString() const override;
 
 	std::string getTitle() const;
 	std::string getDescription() const;

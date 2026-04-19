@@ -9,14 +9,6 @@ int Client::getId() const {
     return id_;
 }
 
-std::string Client::toString() const {
-    std::ostringstream oss;
-
-    oss << "[" << id_ << "] " << name_ << " " << surname_ << " | " << email_ << " | " << number_;
-
-    return oss.str();
-}
-
 std::string Client::getName() const {
     return name_;
 }

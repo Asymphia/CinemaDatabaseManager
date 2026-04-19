@@ -68,5 +68,7 @@ int main() {
     MainMenu Menu(services);
     Menu.show();
 
+    db.disconnect();
+
     return 0;
 }

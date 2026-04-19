@@ -9,14 +9,6 @@ int Ticket::getId() const {
     return id_;
 }
 
-std::string Ticket::toString() const {
-    std::ostringstream oss;
-
-    oss << "[" << id_ << "]" << " ScheduleId: " << scheduleId_ << " | ClientId: " << clientId_ << " | TypeId: " << ticketTypeId_;
-
-    return oss.str();
-}
-
 int Ticket::getScheduleId() const {
     return scheduleId_;
 }

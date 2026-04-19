@@ -10,14 +10,6 @@ int Schedule::getId() const {
 	return id_;
 }
 
-std::string Schedule::toString() const {
-	std::ostringstream oss;
-
-	oss << "[" << id_ << "] " << date_ << " " << time_ << " | MovieId: " << movieId_ << " | RoomId: " << roomId_;
-
-	return oss.str();
-}
-
 int Schedule::getRoomId() const {
 	return roomId_;
 }

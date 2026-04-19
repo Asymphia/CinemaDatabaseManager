@@ -8,14 +8,6 @@ int Room::getId() const {
 	return id_;
 }
 
-std::string Room::toString() const {
-	std::ostringstream oss;
-
-	oss << "[" << id_ << "] Room | Number of seats: " << seatsNum_ << " | CinemaId: " << cinemaId_;
-
-	return oss.str();
-}
-
 int Room::getSeatsNum() const {
 	return seatsNum_;
 }

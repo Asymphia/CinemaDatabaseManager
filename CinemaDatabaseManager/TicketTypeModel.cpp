@@ -9,14 +9,6 @@ int TicketType::getId() const {
     return id_;
 }
 
-std::string TicketType::toString() const {
-    std::ostringstream oss;
-
-    oss << "[" << id_ << "] " << type_ << " | " << std::fixed << std::setprecision(2) << price_ << " z³";
-
-    return oss.str();
-}
-
 std::string TicketType::getType() const {
     return type_;
 }

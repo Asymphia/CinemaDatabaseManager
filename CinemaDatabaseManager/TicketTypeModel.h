@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Model.h"
+#include <string>
 
 class TicketType : public Model {
 public:
@@ -8,7 +9,6 @@ public:
 	TicketType(int id, const std::string& type, double price);
 
 	int getId() const override;
-	std::string toString() const override;
 
 	std::string getType() const;
 	double getPrice() const;
@@ -18,6 +18,6 @@ public:
 
 private:
 	int id_ = 0;
-	double price_ = 0.0; // TODO: price depends on type
-	std::string type_; // TODO: enum for type instead of string
+	double price_ = 0.0;
+	std::string type_;
 };

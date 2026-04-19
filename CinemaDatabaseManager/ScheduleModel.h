@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Model.h"
+#include <string>
 
 class Schedule : public Model {
 public:
@@ -9,7 +10,6 @@ public:
 		const std::string& date, const std::string& time);
 
 	int getId() const override;
-	std::string toString() const override;
 
 	int getRoomId() const;
 	int getMovieId() const;

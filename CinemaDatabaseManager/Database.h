@@ -3,8 +3,6 @@
 #include <string>
 #include <libpq-fe.h>
 
-/* Conneting to PosgreSQL using lipq and making queries */
-
 class Database {
 public:
 	Database(const std::string& host,
