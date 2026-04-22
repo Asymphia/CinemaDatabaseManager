@@ -22,6 +22,8 @@ void MovieUI::show() {
 		case 3:
 			searchById();
 			break;
+		case 0:
+			return;
 		default:
 			break;
 		}
