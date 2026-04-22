@@ -44,7 +44,7 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 3: {
-        EmployeeUI ui(svc_.employee);
+        EmployeeUI ui(svc_.employee, svc_.cinema);
         ui.show();
         break;
     }
@@ -54,17 +54,17 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 5: {
-        RoomUI ui(svc_.room);
+        RoomUI ui(svc_.room, svc_.cinema);
         ui.show();
         break;
     }
     case 6: {
-        ScheduleUI ui(svc_.schedule);
+        ScheduleUI ui(svc_.schedule, svc_.room, svc_.movie);
         ui.show();
         break;
     }
     case 7: {
-        TicketUI ui(svc_.ticket);
+        TicketUI ui(svc_.ticket, svc_.schedule, svc_.client, svc_.ticketType);
         ui.show();
         break;
     }

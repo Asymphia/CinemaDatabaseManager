@@ -96,6 +96,8 @@ void RoomUI::addNew() {
 
 	std::cout << "Number of seats: ";
 	int seatsNum = readInt();
+
+	printAvailableCinemas();
 	std::cout << "Cinema ID: ";
 	int cinemaId = readInt();
 
@@ -123,6 +125,8 @@ void RoomUI::editRoom(const Room& r) {
 
 	std::cout << "Number of seats: ";
 	int seatsNum = readInt();
+
+	printAvailableCinemas();
 	std::cout << "Cinema ID: ";
 	int cinemaId = readInt();
 
@@ -150,5 +154,23 @@ void RoomUI::searchById() {
 	catch (...) {
 		std::cout << "Room not found" << std::endl;
 		pause();
+	}
+}
+
+void RoomUI::printAvailableCinemas() {
+	auto cinemas = cinemaSvc_.getAll();
+
+	if (cinemas.empty()) {
+		std::cout << "No available cinemas" << std::endl;
+		return;
+	}
+
+	std::cout << "Available cinemas: " << std::endl;
+	for (auto& c : cinemas) {
+		std::cout << "ID: " << c.getId();
+		std::cout << ", Name: " << c.getName();
+		std::cout << ", City: " << c.getCity();
+		std::cout << ", House number: " << c.getHouseNumber();
+		std::cout << std::endl;
 	}
 }

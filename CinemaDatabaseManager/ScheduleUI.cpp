@@ -98,10 +98,14 @@ void ScheduleUI::showDetail(const Schedule& s) {
 void ScheduleUI::addNew() {
 	printTitle("Add schedule");
 
+	getAvailableRooms();
 	std::cout << "Room ID: ";
 	int roomId = readInt();
+
+	getAvailableMovies();
 	std::cout << "Movie ID: ";
 	int movieId = readInt();
+
 	std::string date = readLine("Date (in xx-xx-xxxx format)");
 	std::string time = readLine("Time (in xx:xx format)");
 
@@ -127,10 +131,14 @@ void ScheduleUI::addNew() {
 void ScheduleUI::editSchedule(const Schedule& s) {
 	printTitle("Edit schedule");
 
+	getAvailableRooms();
 	std::cout << "Room ID: ";
 	int roomId = readInt();
+
+	getAvailableMovies();
 	std::cout << "Movie ID: ";
 	int movieId = readInt();
+
 	std::string date = readLine("Date (in dd-mm-yyyy format)");
 	std::string time = readLine("Time (in hh:mm format)");
 
@@ -158,5 +166,39 @@ void ScheduleUI::searchById() {
 	catch (...) {
 		std::cout << "Schedule not found" << std::endl;
 		pause();
+	}
+}
+
+void ScheduleUI::getAvailableRooms() {
+	auto rooms = roomSvc_.getAll();
+	
+	std::cout << "Available rooms: " << std::endl;
+
+	if (rooms.empty()) {
+		std::cout << "No room available" << std::endl;
+		return;
+	}
+
+	for (auto& r : rooms) {
+		std::cout << "ID: " << r.getId();
+		std::cout << ", Cinema ID: " << r.getCinemaId();
+		std::cout << std::endl;
+	}
+}
+
+void ScheduleUI::getAvailableMovies() {
+	auto movies = movieSvc_.getAll();
+
+	std::cout << "Available movies:" << std::endl;
+
+	if (movies.empty()) {
+		std::cout << "No movie available" << std::endl;
+		return;
+	}
+
+	for (auto& m : movies) {
+		std::cout << "ID: " << m.getId();
+		std::cout << ", Title: " << m.getTitle();
+		std::cout << std::endl;
 	}
 }

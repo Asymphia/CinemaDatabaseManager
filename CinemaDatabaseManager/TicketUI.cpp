@@ -96,10 +96,15 @@ void TicketUI::showDetail(const Ticket& t) {
 void TicketUI::addNew() {
 	printTitle("Add ticket");
 
+	getAvailableSchedules();
 	std::cout << "Schedule ID: ";
 	int scheduleId = readInt();
+
+	getAvailableClients();
 	std::cout << "Client ID: ";
 	int clientId = readInt();
+
+	getAvailableTicketTypes();
 	std::cout << "Ticket type ID: ";
 	int ticketTypeId = readInt();
 
@@ -125,10 +130,15 @@ void TicketUI::addNew() {
 void TicketUI::editTicket(const Ticket& t) {
 	printTitle("Edit ticket");
 
+	getAvailableSchedules();
 	std::cout << "Schedule ID: ";
 	int scheduleId = readInt();
+
+	getAvailableClients();
 	std::cout << "Client ID: ";
 	int clientId = readInt();
+
+	getAvailableTicketTypes();
 	std::cout << "Ticket type ID: ";
 	int ticketTypeId = readInt();
 
@@ -156,5 +166,62 @@ void TicketUI::searchById() {
 	catch (...) {
 		std::cout << "Ticket not found" << std::endl;
 		pause();
+	}
+}
+
+void TicketUI::getAvailableSchedules() {
+	auto schedules = scheduleSvc_.getAll();
+
+	std::cout << "Available schedules:" << std::endl;
+
+	if (schedules.empty()) {
+		std::cout << "No available schedules" << std::endl;
+		return;
+	}
+
+	for (auto& s : schedules) {
+		std::cout << "ID: " << s.getId();
+		std::cout << ", Movie ID: " << s.getMovieId();
+		std::cout << ", Room ID: " << s.getRoomId();
+		std::cout << ", Date: " << s.getDate();
+		std::cout << ", Time: " << s.getTime();
+		std::cout << std::endl;
+	}
+}
+
+void TicketUI::getAvailableClients() {
+	auto clients = clientSvc_.getAll();
+
+	std::cout << "Available clients:" << std::endl;
+
+	if (clients.empty()) {
+		std::cout << "No available clients" << std::endl;
+		return;
+	}
+
+	for (auto& c : clients) {
+		std::cout << "ID: " << c.getId();
+		std::cout << ", Name: " << c.getName();
+		std::cout << ", Surname: " << c.getSurname();
+		std::cout << ", E-mail: " << c.getEmail();
+		std::cout << std::endl;
+	}
+}
+
+void TicketUI::getAvailableTicketTypes() {
+	auto tts = ttSvc_.getAll();
+
+	std::cout << "Available ticket types:" << std::endl;
+
+	if (tts.empty()) {
+		std::cout << "No available ticket types" << std::endl;
+		return;
+	}
+
+	for (auto& tt : tts) {
+		std::cout << "ID: " << tt.getId();
+		std::cout << ", Type: " << tt.getType();
+		std::cout << ", Price: " << tt.getPrice();
+		std::cout << std::endl;
 	}
 }

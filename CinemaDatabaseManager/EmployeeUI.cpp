@@ -100,6 +100,8 @@ void EmployeeUI::showDetail(const Employee& e) {
 void EmployeeUI::addNew() {
 	printTitle("Add employee");
 
+	printAvailableCinemas();
+
 	std::cout << "Cinema Id: ";
 	int cinemaId = readInt();
 	std::string name = readLine("Name");
@@ -128,6 +130,8 @@ void EmployeeUI::addNew() {
 
 void EmployeeUI::editEmployee(const Employee& e) {
 	printTitle("Edit employee");
+
+	printAvailableCinemas();
 
 	std::cout << "Cinema Id: ";
 	int cinemaId = readInt();
@@ -160,5 +164,23 @@ void EmployeeUI::searchById() {
 	catch (...) {
 		std::cout << "Employee not found" << std::endl;
 		pause();
+	}
+}
+
+void EmployeeUI::printAvailableCinemas() {
+	auto cinemas = cinemaSvc_.getAll();
+
+	if (cinemas.empty()) {
+		std::cout << "No available cinemas" << std::endl;
+		return;
+	}
+
+	std::cout << "Available cinemas: " << std::endl;
+	for (auto& c : cinemas) {
+		std::cout << "ID: " << c.getId();
+		std::cout << ", Name: " << c.getName();
+		std::cout << ", City: " << c.getCity();
+		std::cout << ", House number: " << c.getHouseNumber();
+		std::cout << std::endl;
 	}
 }
