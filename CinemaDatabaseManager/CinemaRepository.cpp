@@ -1,5 +1,6 @@
 #include "CinemaRepository.h"
 #include <stdexcept>
+#include <iostream>
 
 std::vector<Cinema> CinemaRepository::getAll() {
 	PGresult* res = db_.query("SELECT * FROM Cinema ORDER BY id");
