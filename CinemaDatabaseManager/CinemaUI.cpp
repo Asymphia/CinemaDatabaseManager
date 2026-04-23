@@ -73,6 +73,37 @@ void CinemaUI::showDetail(const Cinema& c) {
 	std::cout << "Postal code: " << c.getPostalCode() << std::endl;
 	std::cout << "House number: " << c.getHouseNumber() << std::endl;
 
+	std::cout << std::endl << "Rooms:" << std::endl;
+	auto rooms = roomSvc_.getByCinemaId(c.getId());
+	if (rooms.empty()) {
+		std::cout << "No rooms found" << std::endl;
+	}
+	else {
+		for (auto r : rooms) {
+			std::cout << "Room ID: " << r.getId();
+			std::cout << ", Seats: " << r.getSeatsNum();
+			std::cout << std::endl;
+		}
+	}
+
+	std::cout << std::endl << "Employees:" << std::endl;
+	auto employees = employeeSvc_.getBycinemaId(c.getId());
+	if (employees.empty()) {
+		std::cout << "No employees found" << std::endl;
+	}
+	else {
+		for (auto e : employees) {
+			std::cout << "Employee ID: " << e.getId();
+			std::cout << ", Name: " << e.getName();
+			std::cout << ", Surname: " << e.getSurname();
+			std::cout << ", E-mail: " << e.getEmail();
+			std::cout << ", Phone number: " << e.getNumber();
+			std::cout << std::endl;
+		}
+	}
+
+	std::cout << std::endl;
+
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
 	std::cout << "0. Back" << std::endl;

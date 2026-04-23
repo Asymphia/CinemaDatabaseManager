@@ -34,7 +34,7 @@ void MainMenu::show() {
 void MainMenu::handleChoice(int choice) {
     switch (choice) {
     case 1: {
-        CinemaUI ui(svc_.cinema);
+        CinemaUI ui(svc_.cinema, svc_.room, svc_.employee);
         ui.show();
         break;
     }

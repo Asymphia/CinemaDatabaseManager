@@ -45,3 +45,7 @@ bool EmployeeService::update(const Employee& e) {
 bool EmployeeService::remove(int id) {
 	return repo_.remove(id);
 }
+
+std::vector<Employee> EmployeeService::getBycinemaId(int cinemaId) {
+	return repo_.getByCinemaId(cinemaId);
+}

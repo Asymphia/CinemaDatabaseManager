@@ -16,6 +16,8 @@ public:
     bool update(const Employee& e);
     bool remove(int id);
 
+    std::vector<Employee> getBycinemaId(int cinemaId);
+
 private:
     EmployeeRepository& repo_;
 };

@@ -104,3 +104,28 @@ Employee EmployeeRepository::rowToEmployee(PGresult* res, int row) {
         col(res, row, 5)
     );
 }
+
+std::vector<Employee> EmployeeRepository::getByCinemaId(int cinemaId) {
+    std::string sid = std::to_string(cinemaId);
+
+    const char* params[] = {
+        sid.c_str()
+    };
+
+    PGresult* res = db_.queryParams("SELECT * FROM Employee WHERE cinemaId=$1 ORDER BY id", 1, params);
+
+    std::vector<Employee> result;
+
+    if (!res) {
+        return result;
+    }
+
+    int rows = PQntuples(res);
+
+    for (int i = 0; i < rows; i++) {
+        result.push_back(rowToEmployee(res, i));
+    }
+
+    Database::freeResult(res);
+    return result;
+}

@@ -14,6 +14,8 @@ public:
 	bool update(const Room& r) override;
 	bool remove(int id) override;
 
+	std::vector<Room> getByCinemaID(int cinemaId);
+
 private:
 	Room rowToRoom(PGresult* res, int row);
 };

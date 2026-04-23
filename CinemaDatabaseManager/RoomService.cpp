@@ -38,3 +38,7 @@ bool RoomService::update(const Room& r) {
 bool RoomService::remove(int id) {
 	return repo_.remove(id);
 }
+
+std::vector<Room> RoomService::getByCinemaId(int cinemaId) {
+	return repo_.getByCinemaID(cinemaId);
+}

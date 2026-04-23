@@ -78,3 +78,28 @@ Room RoomRepository::rowToRoom(PGresult* res, int row) {
 		colInt(res, row, 2)
 	);
 }
+
+std::vector<Room> RoomRepository::getByCinemaID(int cinemaId) {
+	std::string sid = std::to_string(cinemaId);
+
+	const char* params[] = {
+		sid.c_str()
+	};
+
+	PGresult* res = db_.queryParams("SELECT * FROM Room WHERE cinemaId=$1 ORDER BY id", 1, params);
+
+	std::vector<Room> result;
+
+	if (!res) {
+		return result;
+	}
+
+	int rows = PQntuples(res);
+
+	for (int i = 0; i < rows; i++) {
+		result.push_back(rowToRoom(res, i));
+	}
+
+	Database::freeResult(res);
+	return result;
+}
