@@ -2,14 +2,16 @@
 
 #include "TicketTypeService.h"
 #include "BaseUI.h"
+#include "TicketService.h"
 
 class TicketTypeUI : public BaseUI {
 public:
-	explicit TicketTypeUI(TicketTypeService& svc) : svc_(svc) {}
+	explicit TicketTypeUI(TicketTypeService& svc, TicketService& ticketSvc) : svc_(svc), ticketSvc_(ticketSvc){}
 	void show() override;
 
 private:
 	TicketTypeService& svc_;
+	TicketService& ticketSvc_;
 
 	void viewAll();
 	void addNew();

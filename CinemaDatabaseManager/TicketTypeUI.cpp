@@ -69,6 +69,22 @@ void TicketTypeUI::showDetail(const TicketType& t) {
 	std::cout << "Type: " << t.getType() << std::endl;
 	std::cout << "Price: " << t.getPrice() << std::endl;
 
+	std::cout << std::endl << "Tickets" << std::endl;
+	auto tickets = ticketSvc_.getByTicketTypeId(t.getId());
+	if (tickets.empty()) {
+		std::cout << "No ticket found" << std::endl;
+	}
+	else {
+		for (auto ti : tickets) {
+			std::cout << "Ticket ID: " << ti.getId();
+			std::cout << ", Schedule ID: " << ti.getScheduleId();
+			std::cout << ", Client ID: " << ti.getClientId();
+			std::cout << std::endl;
+		}
+	}
+
+	std::cout << std::endl;
+
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
 	std::cout << "0. Back" << std::endl;

@@ -18,6 +18,7 @@ public:
 
     std::vector<Ticket> getByClientId(int clientId);
     std::vector<Ticket> getByScheduleId(int scheduleId);
+    std::vector<Ticket> getByTicketTypeId(int ticketTypeId);
 
 private:
     TicketRepository& repo_;

@@ -69,7 +69,7 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 8: {
-        TicketTypeUI ui(svc_.ticketType);
+        TicketTypeUI ui(svc_.ticketType, svc_.ticket);
         ui.show();
         break;
     }

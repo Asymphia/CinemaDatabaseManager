@@ -140,3 +140,27 @@ std::vector<Ticket> TicketRepository::getByScheduleId(int scheduleId) {
     Database::freeResult(res);
     return result;
 }
+
+std::vector<Ticket> TicketRepository::getByTicketTypeId(int ticketTypeId) {
+    std::string sid = std::to_string(ticketTypeId);
+
+    const char* params[] = {
+        sid.c_str()
+    };
+
+    PGresult* res = db_.queryParams("SELECT * FROM Ticket WHERE tickettypeid=$1", 1, params);
+
+    std::vector<Ticket> result;
+
+    if (!res) {
+        return result;
+    }
+
+    int rows = PQntuples(res);
+    for (int i = 0; i < rows; i++) {
+        result.push_back(rowToTicket(res, i));
+    }
+
+    Database::freeResult(res);
+    return result;
+}
