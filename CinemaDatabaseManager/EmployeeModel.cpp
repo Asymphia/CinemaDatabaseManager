@@ -1,5 +1,4 @@
 #include "EmployeeModel.h"
-#include <sstream>
 
 Employee::Employee(int id, int cinemaId, const std::string& name,
     const std::string& surname, const std::string& number,

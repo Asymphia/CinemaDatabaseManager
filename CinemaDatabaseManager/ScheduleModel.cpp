@@ -1,7 +1,5 @@
 #include "ScheduleModel.h"
 
-#include <sstream>
-
 Schedule::Schedule(int id, int roomId, int movieId,
 	const std::string& date, const std::string& time)
 	: id_(id), roomId_(roomId), movieId_(movieId), date_(date), time_(time) {}

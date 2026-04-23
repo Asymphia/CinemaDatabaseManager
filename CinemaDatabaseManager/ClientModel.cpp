@@ -1,5 +1,4 @@
 #include "ClientModel.h"
-#include <sstream>
 
 Client::Client(int id, const std::string& name, const std::string& surname,
     const std::string& email, const std::string& number) 

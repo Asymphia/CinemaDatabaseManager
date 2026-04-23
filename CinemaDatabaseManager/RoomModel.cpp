@@ -1,4 +1,3 @@
-#include <sstream>
 #include "RoomModel.h"
 
 Room::Room(int id, int seatsNum, int cinemaId)

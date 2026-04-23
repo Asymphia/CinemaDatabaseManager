@@ -1,5 +1,4 @@
 #include "CinemaModel.h"
-#include <sstream>
 
 Cinema::Cinema(int id,
 	const std::string& name,

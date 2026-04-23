@@ -1,6 +1,4 @@
 #include "TicketTypeModel.h"
-#include <sstream>
-#include <iomanip>
 
 TicketType::TicketType(int id, const std::string& type, double price)
 	: id_(id), type_(type), price_(price) {}

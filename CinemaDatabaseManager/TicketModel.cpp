@@ -1,5 +1,4 @@
 #include "TicketModel.h"
-#include <sstream>
 
 Ticket::Ticket(int id, int scheduleId, int clientId, int ticketTypeId)
     : id_(id), scheduleId_(scheduleId), clientId_(clientId),
