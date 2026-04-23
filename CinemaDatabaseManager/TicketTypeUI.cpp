@@ -6,7 +6,6 @@ void TicketTypeUI::show() {
 
 		std::cout << "1. View all" << std::endl;
 		std::cout << "2. Add new" << std::endl;
-		std::cout << "3. Search by ID" << std::endl;
 		std::cout << "0. Exit" << std::endl;
 		std::cout << std::endl << "Choice: ";
 
@@ -18,9 +17,6 @@ void TicketTypeUI::show() {
 			break;
 		case 2:
 			addNew();
-			break;
-		case 3:
-			searchById();
 			break;
 		case 0:
 			return;
@@ -166,19 +162,4 @@ void TicketTypeUI::editTicketType(const TicketType& t) {
 	}
 
 	pause();
-}
-
-void TicketTypeUI::searchById() {
-	printTitle("Search by ID");
-
-	std::cout << "Ticket type ID: ";
-	int id = readInt();
-
-	try {
-		showDetail(svc_.getById(id));
-	}
-	catch (...) {
-		std::cout << "Ticket type not found" << std::endl;
-		pause();
-	}
 }

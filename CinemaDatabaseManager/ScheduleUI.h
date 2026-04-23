@@ -19,7 +19,6 @@ private:
 
 	void viewAll();
 	void addNew();
-	void searchById();
 	void showDetail(const Schedule& c);
 	void editSchedule(const Schedule& c);
 

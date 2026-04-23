@@ -15,7 +15,6 @@ private:
 
 	void viewAll();
 	void addNew();
-	void searchById();
 	void showDetail(const Movie& m);
 	void editMovie(const Movie& m);
 };

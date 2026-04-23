@@ -6,7 +6,6 @@ void TicketUI::show() {
 
 		std::cout << "1. View all" << std::endl;
 		std::cout << "2. Add new" << std::endl;
-		std::cout << "3. Search by ID" << std::endl;
 		std::cout << "0. Exit" << std::endl;
 		std::cout << std::endl << "Choice: ";
 
@@ -18,9 +17,6 @@ void TicketUI::show() {
 			break;
 		case 2:
 			addNew();
-			break;
-		case 3:
-			searchById();
 			break;
 		case 0:
 			return;
@@ -152,21 +148,6 @@ void TicketUI::editTicket(const Ticket& t) {
 	}
 
 	pause();
-}
-
-void TicketUI::searchById() {
-	printTitle("Search by ID");
-
-	std::cout << "Ticket ID: ";
-	int id = readInt();
-
-	try {
-		showDetail(svc_.getById(id));
-	}
-	catch (...) {
-		std::cout << "Ticket not found" << std::endl;
-		pause();
-	}
 }
 
 void TicketUI::getAvailableSchedules() {

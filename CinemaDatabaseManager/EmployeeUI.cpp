@@ -6,7 +6,6 @@ void EmployeeUI::show() {
 
 		std::cout << "1. View all" << std::endl;
 		std::cout << "2. Add new" << std::endl;
-		std::cout << "3. Search by ID" << std::endl;
 		std::cout << "0. Exit" << std::endl;
 		std::cout << std::endl << "Choice: ";
 
@@ -18,9 +17,6 @@ void EmployeeUI::show() {
 			break;
 		case 2:
 			addNew();
-			break;
-		case 3:
-			searchById();
 			break;
 		case 0:
 			return;
@@ -150,21 +146,6 @@ void EmployeeUI::editEmployee(const Employee& e) {
 	}
 
 	pause();
-}
-
-void EmployeeUI::searchById() {
-	printTitle("Search by ID");
-
-	std::cout << "Employee ID: ";
-	int id = readInt();
-
-	try {
-		showDetail(svc_.getById(id));
-	}
-	catch (...) {
-		std::cout << "Employee not found" << std::endl;
-		pause();
-	}
 }
 
 void EmployeeUI::printAvailableCinemas() {

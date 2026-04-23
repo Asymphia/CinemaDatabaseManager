@@ -17,7 +17,6 @@ private:
 
 	void viewAll();
 	void addNew();
-	void searchById();
 	void showDetail(const Room& r);
 	void editRoom(const Room& r);
 

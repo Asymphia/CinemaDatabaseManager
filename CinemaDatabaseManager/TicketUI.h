@@ -19,7 +19,6 @@ private:
 
 	void viewAll();
 	void addNew();
-	void searchById();
 	void showDetail(const Ticket& t);
 	void editTicket(const Ticket& t);
 

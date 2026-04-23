@@ -6,7 +6,6 @@ void MovieUI::show() {
 
 		std::cout << "1. View all" << std::endl;
 		std::cout << "2. Add new" << std::endl;
-		std::cout << "3. Search by ID" << std::endl;
 		std::cout << "0. Exit" << std::endl;
 		std::cout << std::endl << "Choice: ";
 
@@ -18,9 +17,6 @@ void MovieUI::show() {
 			break;
 		case 2:
 			addNew();
-			break;
-		case 3:
-			searchById();
 			break;
 		case 0:
 			return;
@@ -155,19 +151,4 @@ void MovieUI::editMovie(const Movie& m) {
 	}
 
 	pause();
-}
-
-void MovieUI::searchById() {
-	printTitle("Search by ID");
-
-	std::cout << "Movie ID: ";
-	int id = readInt();
-
-	try {
-		showDetail(svc_.getById(id));
-	}
-	catch (...) {
-		std::cout << "Movie not found" << std::endl;
-		pause();
-	}
 }

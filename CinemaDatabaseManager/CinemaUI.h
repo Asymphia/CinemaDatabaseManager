@@ -17,7 +17,6 @@ private:
 
     void viewAll();
     void addNew();
-    void searchById();
     void showDetail(const Cinema& c);
     void editCinema(const Cinema& c);
 };

@@ -15,7 +15,6 @@ private:
 
 	void viewAll();
 	void addNew();
-	void searchById();
 	void showDetail(const TicketType& c);
 	void editTicketType(const TicketType& c);
 };
