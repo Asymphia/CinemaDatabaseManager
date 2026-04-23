@@ -54,7 +54,7 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 5: {
-        RoomUI ui(svc_.room, svc_.cinema);
+        RoomUI ui(svc_.room, svc_.cinema, svc_.schedule);
         ui.show();
         break;
     }

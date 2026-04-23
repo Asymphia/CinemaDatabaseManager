@@ -69,6 +69,23 @@ void RoomUI::showDetail(const Room& r) {
 	std::cout << "Number of seats: " << r.getSeatsNum() << std::endl;
 	std::cout << "Cinema ID: " << r.getCinemaId() << std::endl;
 
+	std::cout << std::endl << "Schedules" << std::endl;
+	auto schedules = scheduleSvc_.getByRoomId(r.getId());
+	if (schedules.empty()) {
+		std::cout << "No schedules found" << std::endl;
+	}
+	else {
+		for (auto s : schedules) {
+			std::cout << "Schedule ID: " << s.getId();
+			std::cout << ", Date: " << s.getDate();
+			std::cout << ", Time: " << s.getTime();
+			std::cout << ", Movie ID: " << s.getMovieId();
+			std::cout << std::endl;
+		}
+	}
+
+	std::cout << std::endl;
+
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
 	std::cout << "0. Back" << std::endl;

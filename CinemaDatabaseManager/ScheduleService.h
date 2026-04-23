@@ -16,6 +16,8 @@ public:
 	bool update(const Schedule& s);
 	bool remove(int id);
 
+	std::vector<Schedule> getByRoomId(int roomId);
+
 private:
 	ScheduleRepository& repo_;
 };

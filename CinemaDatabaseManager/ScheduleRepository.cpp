@@ -101,3 +101,29 @@ Schedule ScheduleRepository::rowToSchedule(PGresult* res, int row) {
 		col(res, row, 4)
 	);
 }
+
+std::vector<Schedule> ScheduleRepository::getByRoomId(int roomId) {
+	std::string sid = std::to_string(roomId);
+
+	const char* params[] = {
+		sid.c_str()
+	};
+
+	PGresult* res = db_.queryParams("SELECT * FROM Schedule WHERE roomid=$1", 1, params);
+
+	std::vector<Schedule> result;
+
+
+	if (!res) {
+		return result;
+	}
+
+	int rows = PQntuples(res);
+
+	for (int i = 0; i < rows; i++) {
+		result.push_back(rowToSchedule(res, i));
+	}
+
+	Database::freeResult(res);
+	return result;
+}

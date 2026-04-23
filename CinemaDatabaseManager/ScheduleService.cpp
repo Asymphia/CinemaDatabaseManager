@@ -46,3 +46,7 @@ bool ScheduleService::update(const Schedule& s) {
 bool ScheduleService::remove(int id) {
 	return repo_.remove(id);
 }
+
+std::vector<Schedule> ScheduleService::getByRoomId(int roomId) {
+	return repo_.getByRoomId(roomId);
+}
