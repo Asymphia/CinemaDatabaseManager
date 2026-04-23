@@ -71,6 +71,23 @@ void MovieUI::showDetail(const Movie& m) {
 	std::cout << "Description: " << m.getDescription() << std::endl;
 	std::cout << "Duration: " << m.getDuration() <<" mins" << std::endl;
 
+	std::cout << std::endl << "Schedule" << std::endl;
+	auto schedules = scheduleSvc_.getByMovieId(m.getId());
+	if (schedules.empty()) {
+		std::cout << "No schedule found" << std::endl;
+	}
+	else {
+		for (auto s : schedules) {
+			std::cout << "Schedule ID: " << s.getId();
+			std::cout << ", Date: " << s.getDate();
+			std::cout << ", Time: " << s.getTime();
+			std::cout << ", Movie ID: " << s.getMovieId();
+			std::cout << std::endl;
+		}
+	}
+
+	std::cout << std::endl;
+
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
 	std::cout << "0. Back" << std::endl;

@@ -49,7 +49,7 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 4: {
-        MovieUI ui(svc_.movie);
+        MovieUI ui(svc_.movie, svc_.schedule);
         ui.show();
         break;
     }

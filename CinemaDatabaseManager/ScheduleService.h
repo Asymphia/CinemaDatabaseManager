@@ -17,6 +17,7 @@ public:
 	bool remove(int id);
 
 	std::vector<Schedule> getByRoomId(int roomId);
+	std::vector<Schedule> getByMovieId(int movieId);
 
 private:
 	ScheduleRepository& repo_;

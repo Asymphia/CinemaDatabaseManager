@@ -127,3 +127,28 @@ std::vector<Schedule> ScheduleRepository::getByRoomId(int roomId) {
 	Database::freeResult(res);
 	return result;
 }
+
+
+std::vector<Schedule> ScheduleRepository::getByMovieId(int movieId) {
+	std::string sid = std::to_string(movieId);
+
+	const char* params[] = {
+		sid.c_str()
+	};
+
+	PGresult* res = db_.queryParams("SELECT * FROM Schedule WHERE movieid=$1", 1, params);
+
+	std::vector<Schedule> result;
+
+	if (!res) {
+		return result;
+	}
+
+	int rows = PQntuples(res);
+	for (int i = 0; i < rows; i++) {
+		result.push_back(rowToSchedule(res, i));
+	}
+
+	Database::freeResult(res);
+	return result;
+}

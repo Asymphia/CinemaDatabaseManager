@@ -50,3 +50,7 @@ bool ScheduleService::remove(int id) {
 std::vector<Schedule> ScheduleService::getByRoomId(int roomId) {
 	return repo_.getByRoomId(roomId);
 }
+
+std::vector<Schedule> ScheduleService::getByMovieId(int movieId) {
+	return repo_.getByMovieId(movieId);
+}

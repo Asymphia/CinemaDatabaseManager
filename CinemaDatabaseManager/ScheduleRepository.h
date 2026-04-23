@@ -15,6 +15,7 @@ public:
 	bool remove(int id) override;
 
 	std::vector<Schedule> getByRoomId(int roomId);
+	std::vector<Schedule> getByMovieId(int movieId);
 
 private:
 	Schedule rowToSchedule(PGresult* res, int row);
