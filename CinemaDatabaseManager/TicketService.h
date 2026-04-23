@@ -17,6 +17,7 @@ public:
     bool remove(int id);
 
     std::vector<Ticket> getByClientId(int clientId);
+    std::vector<Ticket> getByScheduleId(int scheduleId);
 
 private:
     TicketRepository& repo_;

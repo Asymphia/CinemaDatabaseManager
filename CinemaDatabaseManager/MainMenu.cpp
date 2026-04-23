@@ -59,7 +59,7 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 6: {
-        ScheduleUI ui(svc_.schedule, svc_.room, svc_.movie);
+        ScheduleUI ui(svc_.schedule, svc_.room, svc_.movie, svc_.ticket);
         ui.show();
         break;
     }

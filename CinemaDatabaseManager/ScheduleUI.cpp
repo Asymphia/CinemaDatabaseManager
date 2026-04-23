@@ -73,6 +73,22 @@ void ScheduleUI::showDetail(const Schedule& s) {
 	std::cout << "Date: " << s.getDate() << std::endl;
 	std::cout << "Time: " << s.getTime() << std::endl;
 
+	std::cout << std::endl << "Tickets" << std::endl;
+	auto tickets = ticketSvc_.getByScheduleId(s.getId());
+	if (tickets.empty()) {
+		std::cout << "No tickets found" << std::endl;
+	}
+	else {
+		for (auto t : tickets) {
+			std::cout << "Ticket ID: " << t.getId();
+			std::cout << ", Ticket Type ID: " << t.getTicketTypeId();
+			std::cout << ", Schedule ID: " << t.getScheduleId();
+			std::cout << std::endl;
+		}
+	}
+
+	std::cout << std::endl;
+
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
 	std::cout << "0. Back" << std::endl;

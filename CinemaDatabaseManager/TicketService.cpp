@@ -37,3 +37,7 @@ bool TicketService::remove(int id) {
 std::vector<Ticket> TicketService::getByClientId(int clientId) {
     return repo_.getByClientId(clientId);
 }
+
+std::vector<Ticket> TicketService::getByScheduleId(int scheduleId) {
+    return repo_.getByScheduleId(scheduleId);
+}
