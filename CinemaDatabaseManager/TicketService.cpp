@@ -33,3 +33,7 @@ bool TicketService::update(const Ticket& t) {
 bool TicketService::remove(int id) {
     return repo_.remove(id);
 }
+
+std::vector<Ticket> TicketService::getByClientId(int clientId) {
+    return repo_.getByClientId(clientId);
+}

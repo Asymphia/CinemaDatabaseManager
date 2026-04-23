@@ -39,7 +39,7 @@ void MainMenu::handleChoice(int choice) {
         break;
     }
     case 2: {
-        ClientUI ui(svc_.client);
+        ClientUI ui(svc_.client, svc_.ticket);
         ui.show();
         break;
     }

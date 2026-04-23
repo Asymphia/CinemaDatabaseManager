@@ -16,6 +16,8 @@ public:
     bool update(const Ticket& t);
     bool remove(int id);
 
+    std::vector<Ticket> getByClientId(int clientId);
+
 private:
     TicketRepository& repo_;
 };

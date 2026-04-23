@@ -73,6 +73,21 @@ void ClientUI::showDetail(const Client& c) {
 	std::cout << "E-mail: " << c.getEmail() << std::endl;
 	std::cout << "Phone number: " << c.getNumber() << std::endl;
 
+	std::cout << std::endl << "Tickets" << std::endl;
+	auto tickets = ticketSvc_.getByClientId(c.getId());
+	if (tickets.empty()) {
+		std::cout << "No tickets found" << std::endl;
+	}
+	else {
+		for (auto t : tickets) {
+			std::cout << "Ticket ID: " << t.getId();
+			std::cout << ", Schedule ID: " << t.getScheduleId();
+			std::cout << ", Ticket Type ID: " << t.getTicketTypeId();
+		}
+	}
+
+	std::cout << std::endl;
+
 	std::cout << "1. Edit" << std::endl;
 	std::cout << "2. Delete" << std::endl;
 	std::cout << "0. Back" << std::endl;
