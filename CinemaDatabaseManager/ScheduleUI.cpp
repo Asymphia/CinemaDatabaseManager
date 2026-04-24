@@ -154,7 +154,7 @@ void ScheduleUI::editSchedule(const Schedule& s) {
 	std::string date = readLine("Date (in dd-mm-yyyy format)");
 	std::string time = readLine("Time (in hh:mm format)");
 
-	Schedule updated(0, roomId, movieId, date, time);
+	Schedule updated(s.getId(), roomId, movieId, date, time);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;

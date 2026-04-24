@@ -141,7 +141,7 @@ void MovieUI::editMovie(const Movie& m) {
 	std::cout << "Duration: ";
 	int duration = readInt();
 
-	Movie updated(0, title, description, duration);
+	Movie updated(m.getId(), title, description, duration);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;

@@ -138,7 +138,7 @@ void TicketUI::editTicket(const Ticket& t) {
 	std::cout << "Ticket type ID: ";
 	int ticketTypeId = readInt();
 
-	Ticket updated(0, scheduleId, clientId, ticketTypeId);
+	Ticket updated(t.getId(), scheduleId, clientId, ticketTypeId);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;

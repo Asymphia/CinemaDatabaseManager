@@ -82,6 +82,8 @@ void CinemaUI::showDetail(const Cinema& c) {
 		}
 	}
 
+	std::cout << std::endl;
+
 	std::cout << std::endl << "Employees:" << std::endl;
 	auto employees = employeeSvc_.getBycinemaId(c.getId());
 	if (employees.empty()) {

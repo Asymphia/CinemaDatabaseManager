@@ -136,7 +136,7 @@ void EmployeeUI::editEmployee(const Employee& e) {
 	std::string email = readLine("E-mail");
 	std::string phone = readLine("Phone number");
 
-	Employee updated(0, cinemaId, name, surname, phone, email);
+	Employee updated(e.getId(), cinemaId, name, surname, phone, email);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;

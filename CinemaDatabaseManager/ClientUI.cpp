@@ -79,6 +79,7 @@ void ClientUI::showDetail(const Client& c) {
 			std::cout << "Ticket ID: " << t.getId();
 			std::cout << ", Schedule ID: " << t.getScheduleId();
 			std::cout << ", Ticket Type ID: " << t.getTicketTypeId();
+			std::cout << std::endl;
 		}
 	}
 
@@ -141,7 +142,7 @@ void ClientUI::editClient(const Client& c) {
 	std::string email = readLine("E-mail");
 	std::string phone = readLine("Phone number");
 
-	Client updated(0, name, surname, email, phone);
+	Client updated(c.getId(), name, surname, email, phone);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;

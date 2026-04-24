@@ -152,7 +152,7 @@ void TicketTypeUI::editTicketType(const TicketType& t) {
 	}
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
-	TicketType updated(0, type, price);
+	TicketType updated(t.getId(), type, price);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;

@@ -143,7 +143,7 @@ void RoomUI::editRoom(const Room& r) {
 	std::cout << "Cinema ID: ";
 	int cinemaId = readInt();
 
-	Room updated(0, seatsNum, cinemaId);
+	Room updated(r.getId(), seatsNum, cinemaId);
 
 	if (svc_.update(updated)) {
 		std::cout << "Added" << std::endl;
